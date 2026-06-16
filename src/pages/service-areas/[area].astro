@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, SERVICE_AREAS, SERVICES, areaUrl } from '../../site.config';
+import { areaDetails } from '../../roofing-content';
+
+export function getStaticPaths() {
+  return areaDetails
+    .filter(area => area.slug !== 'lexington')
+    .map(area => ({
+      params: { area: `${area.slug}-roofing` },
+      props: {
+        area,
+        meta: SERVICE_AREAS.find(item => item.slug === area.slug),
+      },
+    }));
+}
+
+const { area, meta } = Astro.props;
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: SITE.url + '/service-areas/' },
+    { '@type': 'ListItem', position: 3, name: area.title, item: `${SITE.url}/service-areas/${area.slug}-roofing` },
+  ],
+};
+---
+<BaseLayout
+  title={area.title}
+  description={`${area.title}. Roof repair, storm damage review, inspections, roof leaks, and replacement estimates. Call ${SITE.phoneDisplay}.`}
+  schema={breadcrumb}
+  ogImage="/images/roofing/lexington-roofing-service-area.png"
+>
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span aria-hidden="true">›</span> <a href="/service-areas/">Service Areas</a> <span aria-hidden="true">›</span> {area.title}
+  </nav>
+  <section class="hero service-hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{meta.name}, KY {meta.zip}</span>
+        <h1>{area.title}</h1>
+        <p class="hero-sub">{area.intro}</p>
+        <div class="hero-cta">
+          <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="area-hero">Call {SITE.phoneDisplay}</a>
+          <a href="/contact" class="btn btn-secondary btn-large">Request Roofing Help</a>
+        </div>
+      </div>
+      <img src="/images/roofing/lexington-roofing-service-area.png" alt={`Roofing service neighborhood near ${meta.name} Kentucky`} width="1536" height="1024" loading="eager" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2>Roofing Services in {meta.name}</h2>
+        <ul class="list-clean">
+          {SERVICES.map(service => <li><a href={`/${service.slug}`}>{service.title}</a></li>)}
+        </ul>
+      </article>
+      <article class="card">
+        <h2>Local Areas Covered</h2>
+        <ul class="list-clean">
+          {area.neighborhoods.map(name => <li>{name}</li>)}
+        </ul>
+        <p class="muted">{meta.driveFromBase}.</p>
+      </article>
+    </div>
+  </section>
+  <section class="final-cta">
+    <div class="container">
+      <h2>Need roofing help in {meta.name}?</h2>
+      <p>Call for leaks, storm concerns, inspections, repairs, or replacement estimates.</p>
+      <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="area-final">Call {SITE.phoneDisplay}</a>
+    </div>
+  </section>
+</BaseLayout>

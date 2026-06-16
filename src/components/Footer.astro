@@ -1,0 +1,67 @@
+---
+import { SITE, SERVICES, SERVICE_AREAS, areaUrl } from '../site.config';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <section class="fcol">
+        <h3>{SITE.name}</h3>
+        <p><strong>Roof repair, inspections, storm damage help, and replacement quotes in Lexington, KY.</strong></p>
+        <p>
+          Phone: <a href={SITE.phoneHref} data-cta="footer"><strong>{SITE.phoneDisplay}</strong></a><br />
+          Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+        </p>
+        <p class="muted">No public street address is listed until a verified business address is supplied.</p>
+      </section>
+
+      <section class="fcol">
+        <h3>Roofing Services</h3>
+        <ul>
+          {SERVICES.map(s => (
+            <li><a href={`/${s.slug}`}>{s.title}</a></li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="fcol">
+        <h3>Service Areas</h3>
+        <ul>
+          {SERVICE_AREAS.map(a => (
+            <li><a href={areaUrl(a.slug)}>{a.name}, KY Roofing</a></li>
+          ))}
+        </ul>
+      </section>
+
+      <section class="fcol">
+        <h3>Resources</h3>
+        <ul>
+          <li><a href="/blog">Roofing Blog</a></li>
+          <li><a href="/storm-damage-roof-repair">Storm Damage</a></li>
+          <li><a href="/roof-inspection">Roof Inspection</a></li>
+          <li><a href="/roof-leak-repair">Roof Leak Repair</a></li>
+          <li><a href="/contact">Contact / Estimate</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {year} {SITE.name}. All rights reserved.</p>
+      <p class="muted">Serving Lexington, Nicholasville, Georgetown, Richmond, Versailles, Winchester, and nearby Central Kentucky communities.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: #10251d; color: #d7e0db; padding: var(--space-8) 0 var(--space-5); margin-top: var(--space-10); }
+  .site-footer h3 { color: #fff; font-size: 1.05rem; margin-bottom: var(--space-3); }
+  .site-footer a { color: #b7d6c6; }
+  .site-footer a:hover { color: #fff; }
+  .site-footer .muted { color: #93a49b; }
+  .site-footer ul { list-style: none; padding: 0; margin: 0; }
+  .site-footer li { padding: 0.18rem 0; }
+  .footer-grid { display: grid; gap: var(--space-5); grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
+  .footer-bottom { margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid #203a30; text-align: center; font-size: 0.9rem; }
+</style>

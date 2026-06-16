@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../site.config';
+
+const frontmatter = {
+  title: 'What to Do When Your Roof Leaks After a Lexington Storm',
+  description: 'A practical Lexington homeowner guide for roof leaks after wind or rain, including what to check safely, when to call, and what roofers look for.',
+  date: '2026-06-16',
+  readTime: '6 min read',
+  service: 'Storm Damage Roof Repair',
+  location: 'Lexington, KY',
+  slug: 'roof-leak-after-storm-lexington',
+  heroImage: '/images/roofing/lexington-roof-storm-season-blog.png',
+  heroAlt: 'Homeowner checking a roof from the driveway before storm season in Lexington',
+};
+
+const faq = [
+  { q: 'Should I climb on the roof after a storm?', a: 'No. Wet shingles, wind, and ladder work are dangerous. Check from the ground, protect the interior if safe, and call for roofing help.' },
+  { q: 'What should I check first during a roof leak?', a: 'Move valuables, place a container under active dripping, photograph visible interior stains, and note which room or wall line is affected.' },
+  { q: 'Does storm damage always mean roof replacement?', a: 'No. Some storm issues are localized repairs. Replacement becomes more likely when damage or age is widespread.' },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: frontmatter.title,
+    description: frontmatter.description,
+    datePublished: frontmatter.date,
+    image: `${SITE.url}${frontmatter.heroImage}`,
+    author: { '@type': 'Organization', name: SITE.name },
+    publisher: { '@type': 'Organization', name: SITE.name },
+    mainEntityOfPage: `${SITE.url}/blog/${frontmatter.slug}/`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+  },
+];
+---
+<BaseLayout title={frontmatter.title} description={frontmatter.description} schema={schema} ogImage={frontmatter.heroImage} pageType="article">
+  <article class="article">
+    <div class="container narrow">
+      <header class="article-head">
+        <p class="meta">{frontmatter.location} · {frontmatter.service} · {frontmatter.readTime}</p>
+        <h1>{frontmatter.title}</h1>
+        <p>{frontmatter.description}</p>
+        <p><a href={SITE.phoneHref} class="btn btn-primary" data-cta="blog-top">Call {SITE.phoneDisplay}</a></p>
+      </header>
+      <figure class="article-hero-image">
+        <img src={frontmatter.heroImage} alt={frontmatter.heroAlt} width="1536" height="1024" loading="eager" />
+      </figure>
+
+      <h2>Start with safety, not the roof.</h2>
+      <p>If rain is still moving through the area, stay off the roof. Your first job is to reduce interior damage: move furniture, protect electronics, place a container under active dripping, and take photos of stains or wet spots.</p>
+
+      <h2>Look for clues from the ground.</h2>
+      <p>From a safe spot outside, look for missing shingles, lifted edges, branches on the roof, bent flashing, gutter damage, or debris gathered in valleys. These clues help the roofing conversation move faster when you call.</p>
+
+      <h2>Common leak sources after wind and rain</h2>
+      <ul>
+        <li>Lifted or missing shingles</li>
+        <li>Damaged pipe boots</li>
+        <li>Chimney and wall flashing gaps</li>
+        <li>Valley wear where water concentrates</li>
+        <li>Gutter overflow pushing water behind fascia</li>
+      </ul>
+
+      <div class="callout-cta">
+        <h2>Need roof leak help in Lexington?</h2>
+        <p>Call now and describe what you are seeing. You can also review our <a href="/roof-leak-repair">roof leak repair</a>, <a href="/storm-damage-roof-repair">storm damage roof repair</a>, and <a href="/roof-inspection">roof inspection</a> pages.</p>
+        <a href={SITE.phoneHref} class="btn btn-primary" data-cta="blog-mid">Call {SITE.phoneDisplay}</a>
+      </div>
+
+      <h2>Repair or replacement?</h2>
+      <p>A single damaged pipe boot, flashing detail, or shingle section may be repairable. Replacement becomes more likely when shingles are brittle, granule loss is widespread, leaks repeat in multiple areas, or the roof is near the end of its service life.</p>
+
+      <h2>FAQ</h2>
+      {faq.map(item => (
+        <details class="faq">
+          <summary>{item.q}</summary>
+          <div class="faq-body">{item.a}</div>
+        </details>
+      ))}
+    </div>
+  </article>
+</BaseLayout>

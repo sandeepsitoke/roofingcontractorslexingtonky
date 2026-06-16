@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, SERVICE_AREAS, areaUrl } from '../../site.config';
+---
+<BaseLayout
+  title="Roofing Service Areas Near Lexington KY"
+  description="Roofing Contractors Lexington KY serves Lexington, Nicholasville, Georgetown, Richmond, Versailles, Winchester, and nearby Central Kentucky communities."
+>
+  <section class="hero service-hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Central Kentucky roofing service areas</span>
+        <h1>Roofing service areas around Lexington, KY.</h1>
+        <p class="hero-sub">Call for roof repair, roof leaks, storm damage review, inspections, and replacement estimates across Lexington and nearby communities.</p>
+        <div class="hero-cta">
+          <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="areas-hero">Call {SITE.phoneDisplay}</a>
+          <a href="/contact" class="btn btn-secondary btn-large">Request Service</a>
+        </div>
+      </div>
+      <img src="/images/roofing/lexington-roofing-service-area.png" alt="Central Kentucky neighborhood with roofing materials near a home" width="1536" height="1024" loading="eager" />
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        {SERVICE_AREAS.map(area => (
+          <article class="card">
+            <h2>{area.name}, KY</h2>
+            <p>Roofing help for {area.name} homeowners, including leaks, shingle repairs, storm damage checks, inspections, and replacement planning.</p>
+            <a class="more" href={areaUrl(area.slug)}>View {area.name} roofing page</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

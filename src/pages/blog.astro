@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../site.config';
+import posts from '../content/blog-manifest.json';
+
+const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
+---
+<BaseLayout
+  title="Lexington Roofing Blog | Roof Repair & Storm Damage Tips"
+  description="Practical roofing advice for Lexington homeowners, including roof leaks, storm damage, inspections, replacement planning, and when to call."
+>
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span aria-hidden="true">›</span> Blog
+  </nav>
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">Lexington Roofing Blog</span>
+      <h1>Roof repair and storm-readiness advice for Lexington homeowners.</h1>
+      <p class="hero-sub">Practical guidance for leaks, storm damage, inspections, and replacement decisions without exaggerated claims.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <ul class="post-list">
+        {sortedPosts.map(p => (
+          <li class="post-card">
+            <a href={`/blog/${p.slug}`}>
+              <span class="meta">{new Date(p.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })} · {p.readTime}</span>
+              <h2>{p.title}</h2>
+              <p>{p.excerpt || p.description}</p>
+              <span class="read-more">Read article</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <section class="section section--alt">
+    <div class="container">
+      <h2 class="center">Have a roofing question we have not answered?</h2>
+      <p class="center"><a href={SITE.phoneHref} class="btn btn-primary btn-large">Call {SITE.phoneDisplay}</a> <a href="/contact" class="btn btn-secondary btn-large" style="margin-left:0.5rem;">Send a Note</a></p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero-inner { max-width: 820px; }
+  .post-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-4); }
+  .post-card a { display: block; padding: var(--space-5); background: #fff; border: 1px solid var(--c-border); border-radius: var(--r-lg); color: var(--c-text); }
+  .post-card a:hover { border-color: var(--c-primary); text-decoration: none; }
+  .post-card h2 { color: var(--c-primary); font-size: 1.3rem; margin: 0.3rem 0 0.5rem; }
+  .post-card .meta { color: var(--c-text-muted); font-size: 0.85rem; }
+  .post-card .read-more { display: inline-block; margin-top: 0.5rem; font-weight: 600; color: var(--c-accent); }
+</style>

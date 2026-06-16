@@ -1,0 +1,130 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE, SERVICES, SERVICE_AREAS, areaUrl } from '../site.config';
+
+const faq = [
+  { q: 'How fast should I call after a roof leak starts?', a: 'Call as soon as you see dripping, staining, damp insulation, or missing shingles. A small leak can move through decking and insulation before it shows clearly indoors.' },
+  { q: 'Do you handle emergency roof repair in Lexington?', a: 'Yes. Call the phone number on this site for urgent roof leak triage and scheduling. Stay off the roof during rain, wind, or wet conditions.' },
+  { q: 'Can you help decide between repair and replacement?', a: 'Yes. The goal is to explain whether the issue is localized or widespread, what repair would address, and when replacement is the more practical long-term option.' },
+  { q: 'Do you guarantee insurance claim approval?', a: 'No. Insurance decisions are made by the carrier. Roofing documentation can describe visible conditions and repair needs, but it should never promise claim approval.' },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' }],
+};
+---
+<BaseLayout
+  title="Roofing Contractors Lexington KY | Roof Repair & Replacement"
+  description="Call Roofing Contractors Lexington KY at (859) 809-8024 for roof repair, emergency roof leak help, storm damage review, inspections, and roof replacement estimates."
+  schema={[faqSchema, breadcrumbSchema]}
+>
+  <section class="hero hero-photo">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Lexington, KY roofing help</span>
+        <h1>Roofing Contractors in Lexington, KY for leaks, storm damage, and replacement quotes.</h1>
+        <p class="hero-sub">
+          If your roof is leaking, missing shingles, or showing storm wear, call for practical next steps.
+          We focus on clear roofing guidance, conservative claims, and fast phone-first scheduling.
+        </p>
+        <div class="hero-cta">
+          <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="hero-primary">Call {SITE.phoneDisplay}</a>
+          <a href="/contact" class="btn btn-secondary btn-large" data-cta="hero-secondary">Request Roofing Help</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge badge--light">Roof leak triage</span>
+          <span class="badge badge--light">Storm damage review</span>
+          <span class="badge badge--light">Repair or replacement guidance</span>
+        </div>
+      </div>
+      <img src="/images/roofing/lexington-roofing-home-hero.png" alt="Roofing crew preparing at a Lexington home" width="1536" height="1024" loading="eager" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Roofing Services Built Around the Call</h2>
+        <p>Each service page is structured to help a homeowner understand the issue, know when to call, and move quickly to a phone conversation.</p>
+      </div>
+      <div class="grid grid-3">
+        {SERVICES.map(service => (
+          <article class="card image-card">
+            <img src={service.image} alt={service.alt} width="1536" height="1024" loading="lazy" />
+            <h3>{service.title}</h3>
+            <p>{service.short}</p>
+            <a class="more" href={`/${service.slug}`}>Learn more</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container split">
+      <img src="/images/roofing/roofing-inspection-detail.png" alt="Roofing inspection detail on asphalt shingles" width="1536" height="1024" loading="lazy" />
+      <div>
+        <span class="eyebrow">What happens when you call</span>
+        <h2>Simple roofing help without unsupported proof or pressure.</h2>
+        <ol class="steps">
+          <li><strong>Call:</strong> Tell us what you are seeing: leak, missing shingles, storm impact, or age concerns.</li>
+          <li><strong>Review:</strong> The roof concern is reviewed with repair-first thinking when the damage is localized.</li>
+          <li><strong>Quote:</strong> You get next-step guidance before committing to repair or replacement.</li>
+        </ol>
+        <a href={SITE.phoneHref} class="btn btn-primary" data-cta="process">Call {SITE.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Service Areas Around Lexington</h2>
+        <p>Roofing pages are generated with local context while avoiding thin duplicate city pages.</p>
+      </div>
+      <ul class="areas-grid">
+        {SERVICE_AREAS.map(area => (
+          <li class="areas-item">
+            <a href={areaUrl(area.slug)}>
+              <strong>{area.name}, KY {area.zip}</strong>
+              <span class="muted">{area.driveFromBase}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head"><h2>Frequently Asked Questions</h2></div>
+      <div class="faq-list">
+        {faq.map(f => (
+          <details class="faq">
+            <summary>{f.q}</summary>
+            <div class="faq-body">{f.a}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Need roofing help in Lexington?</h2>
+      <p>Call now for roof leak help, storm damage review, inspection scheduling, or replacement options.</p>
+      <div class="hero-cta center">
+        <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="final-cta">Call {SITE.phoneDisplay}</a>
+        <a href="/contact" class="btn btn-secondary btn-large" data-cta="final-secondary">Request Estimate</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

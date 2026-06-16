@@ -1,0 +1,82 @@
+---
+import { SITE, NAV } from '../site.config';
+const current = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container header-row">
+    <a href="/" class="brand" aria-label={SITE.name}>
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <span class="brand-text">
+        <strong>{SITE.name}</strong>
+        <small>Roof repair and replacement in Lexington, KY</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+      <ul>
+        {NAV.map(item => (
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                'nav-link',
+                { 'is-active': current === item.href || (item.href !== '/' && current.startsWith(item.href)) },
+              ]}
+            >{item.label}</a>
+          </li>
+        ))}
+        <li class="nav-call">
+          <a href={SITE.phoneHref} class="nav-call-btn" data-cta="header">
+            Call {SITE.phoneDisplay}
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--c-border); box-shadow: var(--shadow-sm); }
+  .header-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); padding: var(--space-3) var(--space-5); min-height: 68px; }
+  .brand { display: flex; align-items: center; gap: var(--space-3); color: var(--c-text); text-decoration: none; }
+  .brand:hover { text-decoration: none; }
+  .brand-mark { width: 38px; height: 38px; background: var(--c-primary); color: #fff; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--r-md); font-weight: 800; font-size: 1.1rem; }
+  .brand-text strong { display: block; font-size: 1.02rem; line-height: 1.1; }
+  .brand-text small { display: block; font-size: 0.78rem; color: var(--c-text-muted); }
+  .nav-toggle { display: none; background: transparent; border: 0; padding: 0.5rem; flex-direction: column; gap: 5px; cursor: pointer; }
+  .nav-toggle span { display: block; width: 26px; height: 3px; background: var(--c-text); border-radius: 2px; transition: transform 0.2s ease, opacity 0.2s ease; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .primary-nav ul { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: var(--space-4); }
+  .primary-nav .nav-link { color: var(--c-text); font-weight: 500; font-size: 0.95rem; padding: 0.4rem 0.1rem; border-bottom: 2px solid transparent; }
+  .primary-nav .nav-link.is-active { border-bottom-color: var(--c-primary); color: var(--c-primary); }
+  .primary-nav .nav-link:hover { color: var(--c-primary); text-decoration: none; }
+  .nav-call { margin-left: var(--space-3); }
+  .nav-call-btn { display: inline-flex; align-items: center; background: var(--c-accent); color: #fff; padding: 0.6rem 1rem; border-radius: var(--r-md); font-weight: 700; font-size: 0.95rem; }
+  .nav-call-btn:hover { background: var(--c-accent-dark); text-decoration: none; }
+  @media (max-width: 980px) {
+    .nav-toggle { display: inline-flex; }
+    .primary-nav { position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-top: 1px solid var(--c-border); box-shadow: var(--shadow-md); max-height: 0; overflow: hidden; transition: max-height 0.25s ease; }
+    .primary-nav.is-open { max-height: 650px; }
+    .primary-nav ul { flex-direction: column; align-items: stretch; padding: var(--space-3) var(--space-5); gap: var(--space-2); }
+    .primary-nav .nav-link { display: block; padding: 0.6rem 0; border-bottom: 1px solid var(--c-border); }
+    .nav-call { margin: 0.5rem 0 1rem; }
+    .nav-call-btn { width: 100%; justify-content: center; }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const nav = document.getElementById('primaryNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+</script>

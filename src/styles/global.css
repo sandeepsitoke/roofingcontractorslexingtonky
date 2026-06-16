@@ -1,0 +1,311 @@
+/* =========================================================================
+   Roofing Contractors Lexington KY global styles
+   Minimal, mobile-first, no framework.
+   ========================================================================= */
+
+:root {
+  --c-bg: #ffffff;
+  --c-bg-soft: #f5f7fa;
+  --c-bg-alt: #f0f4f8;
+  --c-text: #0f2233;
+  --c-text-soft: #4a5b6c;
+  --c-text-muted: #6b7a89;
+  --c-border: #e1e7ee;
+  --c-primary: #17412f;
+  --c-primary-dark: #084a85;
+  --c-accent: #d63b1f;         /* emergency red */
+  --c-accent-dark: #b02d16;
+  --c-warn-bg: #fff7e6;
+  --c-success: #137a4b;
+
+  --shadow-sm: 0 1px 2px rgba(15, 34, 51, 0.06);
+  --shadow-md: 0 4px 12px rgba(15, 34, 51, 0.08);
+  --shadow-lg: 0 10px 30px rgba(15, 34, 51, 0.10);
+
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 16px;
+
+  --maxw: 1180px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+  --space-10: 4.5rem;
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", var(--font-body);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--c-text);
+  background: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; height: auto; display: block; }
+a { color: var(--c-primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--c-text);
+  line-height: 1.25;
+  margin: 0 0 var(--space-4);
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(1.9rem, 4.4vw, 2.75rem); }
+h2 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); }
+h3 { font-size: clamp(1.15rem, 2.2vw, 1.35rem); }
+p  { margin: 0 0 var(--space-4); }
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+.section { padding: var(--space-8) 0; }
+.section--alt { background: var(--c-bg-soft); }
+.section-head { text-align: center; margin-bottom: var(--space-6); }
+.section-head p { color: var(--c-text-soft); max-width: 720px; margin-left: auto; margin-right: auto; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--r-md);
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none !important;
+  transition: transform 0.12s ease, background 0.18s ease, box-shadow 0.18s ease;
+  cursor: pointer;
+  border: 0;
+  line-height: 1.2;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn:active { transform: translateY(0); }
+
+.btn-primary {
+  background: var(--c-accent);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--c-accent-dark); }
+
+.btn-secondary {
+  background: #fff;
+  color: var(--c-primary);
+  border: 1.5px solid var(--c-primary);
+}
+.btn-secondary:hover { background: var(--c-primary); color: #fff; }
+
+.btn-large { padding: 1.05rem 1.75rem; font-size: 1.1rem; }
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 800px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+.card h3 { margin-top: 0; }
+.card a.more { font-weight: 600; }
+
+.badge-row { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: center; }
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.badge--light { background: var(--c-bg-alt); color: var(--c-text); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  margin-bottom: var(--space-2);
+}
+
+.list-clean { list-style: none; padding: 0; margin: 0 0 var(--space-4); }
+.list-clean li { padding: 0.3rem 0 0.3rem 1.4rem; position: relative; }
+.list-clean li::before {
+  content: "✓";
+  position: absolute; left: 0; top: 0.3rem;
+  color: var(--c-success);
+  font-weight: 700;
+}
+
+.muted { color: var(--c-text-muted); }
+.center { text-align: center; }
+
+.skip-link {
+  position: absolute; top: -100px; left: 0;
+  background: var(--c-primary); color: #fff; padding: 0.5rem 1rem; z-index: 9999;
+}
+.skip-link:focus { top: 0; }
+
+details.faq {
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-md);
+  margin-bottom: var(--space-3);
+  background: #fff;
+}
+details.faq[open] { box-shadow: var(--shadow-sm); }
+details.faq summary {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 3rem;
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::after {
+  content: "+";
+  position: absolute; right: 1.2rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem; font-weight: 400; color: var(--c-primary);
+  transition: transform 0.2s ease;
+}
+details.faq[open] summary::after { content: "−"; }
+details.faq .faq-body { padding: 0 1.2rem 1.2rem; color: var(--c-text-soft); }
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: var(--c-text-muted);
+  padding: var(--space-4) 0;
+}
+.breadcrumb a { color: var(--c-text-muted); }
+.breadcrumb span[aria-hidden] { margin: 0 0.4rem; }
+
+.callout {
+  background: var(--c-warn-bg);
+  border-left: 4px solid #d49a1a;
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--r-sm);
+  margin: var(--space-5) 0;
+}
+
+/* Article layout (blog posts, MDX pages) */
+.article { padding: var(--space-6) 0 var(--space-8); }
+.article .narrow { max-width: 760px; }
+.article-head { margin: var(--space-4) 0 var(--space-5); padding-bottom: var(--space-4); border-bottom: 1px solid var(--c-border); }
+.article-head h1 { margin-top: 0.5rem; }
+.article-head .meta { color: var(--c-text-muted); font-size: 0.9rem; }
+.article h2 { margin-top: 2rem; }
+.article h3 { color: var(--c-primary); margin-top: 1.2rem; }
+.article p, .article li { color: var(--c-text-soft); }
+.article a { color: var(--c-primary); }
+.article ul, .article ol { padding-left: 1.4rem; }
+.article ul li, .article ol li { margin-bottom: 0.4rem; }
+.article-hero-image { margin: var(--space-5) 0; }
+.article-hero-image img { width: 100%; height: auto; border-radius: var(--r-md); border: 1px solid var(--c-border); }
+.article-hero-image figcaption { color: var(--c-text-muted); font-size: 0.85rem; margin-top: 0.4rem; }
+.callout-cta { margin: var(--space-6) 0; padding: var(--space-5); border: 1px solid var(--c-border); border-radius: var(--r-md); background: #f7fbff; }
+
+/* Roofing site additions */
+:root {
+  --c-primary: #17412f;
+  --c-primary-dark: #0f2d20;
+  --c-accent: #b54324;
+  --c-accent-dark: #91351d;
+}
+.hero {
+  background: linear-gradient(180deg, #f3f7f1 0%, #e6eee2 100%);
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--c-border);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: var(--space-6);
+  align-items: center;
+}
+.hero-grid img,
+.split img,
+.image-card img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--r-md);
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-md);
+}
+.hero-sub { font-size: 1.1rem; color: var(--c-text-soft); }
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); margin: var(--space-4) 0; }
+.hero-cta.center { justify-content: center; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: var(--space-3); }
+.image-card { overflow: hidden; }
+.image-card img {
+  margin: calc(var(--space-5) * -1) calc(var(--space-5) * -1) var(--space-4);
+  width: calc(100% + var(--space-10));
+  border-radius: var(--r-lg) var(--r-lg) 0 0;
+  border: 0;
+  box-shadow: none;
+}
+.split {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: center;
+}
+.steps { padding-left: 1.2rem; color: var(--c-text-soft); }
+.areas-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); grid-template-columns: repeat(3, 1fr); }
+.areas-item a { display: block; padding: var(--space-3) var(--space-4); background: #fff; border: 1px solid var(--c-border); border-radius: var(--r-md); color: var(--c-text); }
+.areas-item a:hover { border-color: var(--c-primary); text-decoration: none; }
+.areas-item strong { display: block; }
+.areas-item .muted { font-size: 0.85rem; }
+.final-cta { background: var(--c-primary); color: #fff; padding: var(--space-8) 0; text-align: center; }
+.final-cta h2 { color: #fff; }
+.final-cta p { color: #d8e6dc; max-width: 680px; margin-left: auto; margin-right: auto; }
+.final-cta .btn-secondary { background: transparent; color: #fff; border-color: #fff; }
+.final-cta .btn-secondary:hover { background: #fff; color: var(--c-primary); }
+.contact-info .big-phone { display: inline-block; font-size: 1.8rem; font-weight: 800; color: var(--c-accent); margin: 0.3rem 0; }
+.contact-form form { display: flex; flex-direction: column; gap: 0.8rem; }
+.field { display: flex; flex-direction: column; }
+.field label { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.field input, .field select, .field textarea {
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--r-sm);
+  font-family: inherit;
+  font-size: 1rem;
+  background: #fff;
+}
+.hidden { display: none; }
+@media (max-width: 820px) {
+  .hero-grid, .split { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 460px) {
+  .areas-grid { grid-template-columns: 1fr; }
+}

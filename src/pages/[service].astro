@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../site.config';
+import { serviceDetails } from '../roofing-content';
+
+export function getStaticPaths() {
+  return serviceDetails.map(service => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+const serviceName = service.title.replace(' in Lexington, KY', '').toLowerCase();
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: service.faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: service.title, item: `${SITE.url}/${service.slug}` },
+  ],
+};
+---
+<BaseLayout
+  title={`${service.title} | Lexington KY Roofing Contractors`}
+  description={`${service.title} in Lexington, KY. ${service.description} Call ${SITE.phoneDisplay} for roofing help.`}
+  schema={[faqSchema, breadcrumb]}
+  ogImage={service.image}
+>
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span aria-hidden="true">›</span> {service.title}
+  </nav>
+
+  <section class="hero service-hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{service.eyebrow}</span>
+        <h1>{service.title}</h1>
+        <p class="hero-sub">{service.description}</p>
+        <div class="hero-cta">
+          <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="service-hero">Call {SITE.phoneDisplay}</a>
+          <a href="/contact" class="btn btn-secondary btn-large" data-cta="service-contact">Request Estimate</a>
+        </div>
+      </div>
+      <img src={service.image} alt={service.alt} width="1536" height="1024" loading="eager" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        <article class="card">
+          <h2>Roofing Issues This Covers</h2>
+          <ul class="list-clean">
+            {service.bullets.map(item => <li>{item}</li>)}
+          </ul>
+        </article>
+        <article class="card">
+          <h2>When to Call</h2>
+          <p>Call when you see water stains, lifted shingles, missing shingles, flashing gaps, granules in gutters, or roof concerns after heavy wind or rain.</p>
+          <p>Stay off the roof if conditions are wet, windy, steep, or uncertain. A phone call is safer than a ladder check.</p>
+          <a href={SITE.phoneHref} class="btn btn-primary" data-cta="when-call">Call {SITE.phoneDisplay}</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>What Happens During the Visit</h2>
+        <p>Every roofing page follows the same lead-focused flow: understand the problem, inspect the likely source, explain options, and give a next step.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card"><h3>1. Problem review</h3><p>Tell us where you noticed the leak, stain, missing shingles, or storm concern.</p></article>
+        <article class="card"><h3>2. Roof condition check</h3><p>The likely source is reviewed with attention to shingles, flashing, vents, valleys, and gutters.</p></article>
+        <article class="card"><h3>3. Repair or replacement path</h3><p>You get a practical recommendation without unsupported claims, invented staff proof, or guaranteed insurance promises.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>Frequently Asked Questions</h2></div>
+      {service.faqs.map(f => (
+        <details class="faq">
+          <summary>{f.q}</summary>
+          <div class="faq-body">{f.a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>Talk through your roofing concern today.</h2>
+      <p>Call for {serviceName} in Lexington and nearby Central Kentucky communities.</p>
+      <div class="hero-cta center">
+        <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="service-final">Call {SITE.phoneDisplay}</a>
+        <a href="/contact" class="btn btn-secondary btn-large" data-cta="service-final-contact">Request Roofing Help</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

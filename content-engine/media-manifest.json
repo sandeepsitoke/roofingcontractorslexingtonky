@@ -1,0 +1,101 @@
+[
+  {
+    "filename": "/images/roofing/lexington-roofing-home-hero.png",
+    "placement": "homepage hero",
+    "model": "built-in-imagegen",
+    "alt": "Roofing crew preparing at a Lexington home",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/roofing-inspection-detail.png",
+    "placement": "homepage process section",
+    "model": "built-in-imagegen",
+    "alt": "Roofing inspection detail on asphalt shingles",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/roof-repair-lexington.png",
+    "placement": "roof repair service page",
+    "model": "built-in-imagegen",
+    "alt": "Roofer inspecting shingles on a Lexington home",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/emergency-roof-repair-lexington.png",
+    "placement": "emergency roof repair service page",
+    "model": "built-in-imagegen",
+    "alt": "Roofer checking a damp roof after storm damage in Lexington",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/roof-replacement-lexington.png",
+    "placement": "roof replacement service page",
+    "model": "built-in-imagegen",
+    "alt": "Roofing consultation outside a Lexington home",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/storm-damage-roof-repair-lexington.png",
+    "placement": "storm damage service page",
+    "model": "built-in-imagegen",
+    "alt": "Roofing inspector reviewing a Lexington home after a storm",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/roof-inspection-lexington.png",
+    "placement": "roof inspection service page",
+    "model": "built-in-imagegen",
+    "alt": "Roof inspector reviewing a Lexington home from the driveway",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/roof-leak-repair-lexington.png",
+    "placement": "roof leak repair service page",
+    "model": "built-in-imagegen",
+    "alt": "Gloved hands checking roof flashing near a gutter",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/lexington-roofing-service-area.png",
+    "placement": "service area pages",
+    "model": "built-in-imagegen",
+    "alt": "Central Kentucky neighborhood with roofing materials near a home",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/roofing-contact-call.png",
+    "placement": "contact page",
+    "model": "built-in-imagegen",
+    "alt": "Homeowner calling for roofing help with shingle samples on a table",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  },
+  {
+    "filename": "/images/roofing/lexington-roof-storm-season-blog.png",
+    "placement": "blog hero",
+    "model": "built-in-imagegen",
+    "alt": "Homeowner checking a roof from the driveway before storm season in Lexington",
+    "dimensions": "1536x1024",
+    "generatedDate": "2026-06-16",
+    "sourceType": "AI-generated lifestyle roofing image"
+  }
+]

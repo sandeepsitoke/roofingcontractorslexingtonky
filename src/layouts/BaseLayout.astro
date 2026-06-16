@@ -1,0 +1,93 @@
+---
+import '../styles/global.css';
+import { SITE, SERVICE_AREAS } from '../site.config';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import StickyCall from '../components/StickyCall.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  schema?: Record<string, any> | Array<Record<string, any>>;
+  ogImage?: string;
+  pageType?: 'website' | 'article';
+}
+
+const {
+  title,
+  description,
+  canonical,
+  schema,
+  ogImage = '/images/roofing/lexington-roofing-home-hero.png',
+  pageType = 'website',
+} = Astro.props;
+
+const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
+
+const baseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'RoofingContractor',
+  '@id': `${SITE.url}#business`,
+  name: SITE.name,
+  url: SITE.url,
+  telephone: SITE.phoneRaw,
+  email: SITE.email,
+  image: `${SITE.url}${ogImage}`,
+  priceRange: SITE.priceRange,
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  areaServed: SERVICE_AREAS.map(area => ({
+    '@type': 'City',
+    name: `${area.name}, ${SITE.state}`,
+    containedInPlace: { '@type': 'State', name: 'Kentucky' },
+  })),
+};
+
+const schemas = schema
+  ? (Array.isArray(schema) ? [baseSchema, ...schema] : [baseSchema, schema])
+  : [baseSchema];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17412f" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={pageType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={`${SITE.url}${ogImage}`} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    {schemas.map(s => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <Header />
+    <main id="main">
+      <slot />
+    </main>
+    <Footer />
+    <StickyCall />
+  </body>
+</html>

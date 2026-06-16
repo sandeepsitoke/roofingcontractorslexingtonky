@@ -1,0 +1,28 @@
+{
+  "cadencePerWeek": 2,
+  "timezone": "America/New_York",
+  "queue": [
+    {
+      "id": "roof-leak-after-storm-lexington",
+      "topic": "What to do when your roof leaks after a Lexington storm",
+      "service": "Storm Damage Roof Repair",
+      "location": "Lexington",
+      "searchIntent": "Homeowner needs safe next steps after wind or rain causes a roof leak.",
+      "targetKeyword": "roof leak after storm Lexington KY",
+      "ctaTarget": "Call now",
+      "requiredInternalLinks": ["/storm-damage-roof-repair", "/roof-leak-repair", "/roof-inspection", "/contact"],
+      "imageCount": 1
+    },
+    {
+      "id": "roof-repair-vs-replacement-lexington",
+      "topic": "Roof repair or replacement for Lexington homeowners",
+      "service": "Roof Replacement",
+      "location": "Lexington",
+      "searchIntent": "Homeowner wants to know whether a damaged or older roof should be repaired or replaced.",
+      "targetKeyword": "roof repair or replacement Lexington KY",
+      "ctaTarget": "Request estimate",
+      "requiredInternalLinks": ["/roof-repair", "/roof-replacement", "/contact"],
+      "imageCount": 1
+    }
+  ]
+}

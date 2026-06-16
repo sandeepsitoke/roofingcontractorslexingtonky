@@ -1,0 +1,18 @@
+{
+  "generated": [
+    {
+      "briefId": "roof-leak-after-storm-lexington",
+      "slug": "roof-leak-after-storm-lexington",
+      "date": "2026-06-16",
+      "textModel": "manual-claude-blog-policy",
+      "imageModel": "built-in-imagegen",
+      "imagePrompts": [
+        "Realistic homeowner roof check preparation image for Lexington Kentucky blog post, front yard of a suburban Kentucky home before storm season, no logos, no readable text, no watermark, no fake proof."
+      ],
+      "qaStatus": "draft",
+      "publishStatus": "draft"
+    }
+  ],
+  "lastRun": "2026-06-16T00:00:00.000Z",
+  "lastPublishCheck": null
+}

@@ -1,0 +1,40 @@
+---
+import { SITE } from '../site.config';
+---
+<div class="sticky-call" id="stickyCall" aria-hidden="true">
+  <a href={SITE.phoneHref} data-cta="sticky-mobile">
+    <span aria-hidden="true">📞</span> Call Now: {SITE.phoneDisplay}
+  </a>
+</div>
+
+<style>
+  .sticky-call {
+    display: none;
+    position: fixed; left: 0; right: 0; bottom: 0;
+    background: var(--c-accent);
+    z-index: 60;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.18);
+  }
+  .sticky-call a {
+    display: flex; align-items: center; justify-content: center;
+    gap: 0.5rem;
+    color: #fff; text-decoration: none;
+    padding: 1rem;
+    font-weight: 700; font-size: 1.05rem;
+  }
+  @media (max-width: 768px) {
+    .sticky-call.is-visible { display: block; }
+  }
+</style>
+
+<script>
+  const el = document.getElementById('stickyCall');
+  if (el && window.innerWidth <= 768) {
+    const onScroll = () => {
+      if (window.scrollY > 320) el.classList.add('is-visible');
+      else el.classList.remove('is-visible');
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+</script>

@@ -1,0 +1,27 @@
+{
+  "name": "roofingcontractorslexingtonky",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "content:generate": "node scripts/content-engine/generate.mjs",
+    "content:queue": "node scripts/content-engine/generate.mjs --queue",
+    "content:qa": "node scripts/content-engine/qa.mjs",
+    "content:publish": "node scripts/content-engine/publish.mjs",
+    "content:index": "node scripts/content-engine/indexing.mjs",
+    "content:index:latest": "node scripts/content-engine/indexing.mjs --latest",
+    "content:index:inspect": "node scripts/content-engine/indexing.mjs --inspect --latest",
+    "content:dry-run": "node scripts/content-engine/generate.mjs --queue --dry-run"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^6.0.3",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^6.4.7"
+  }
+}

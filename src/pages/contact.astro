@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE, SERVICE_AREAS } from '../site.config';
+---
+<BaseLayout
+  title="Contact Roofing Contractors Lexington KY"
+  description="Call Roofing Contractors Lexington KY at (859) 809-8024 for roof repair, roof leaks, storm damage review, inspections, and replacement estimates."
+  ogImage="/images/roofing/roofing-contact-call.png"
+>
+  <nav class="breadcrumb container" aria-label="Breadcrumb">
+    <a href="/">Home</a> <span aria-hidden="true">›</span> Contact
+  </nav>
+  <section class="hero service-hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Phone-first roofing help</span>
+        <h1>Contact Roofing Contractors Lexington KY.</h1>
+        <p class="hero-sub">For active roof leaks, storm concerns, missing shingles, inspections, or replacement planning, call first. A phone conversation is the fastest way to understand the next step.</p>
+        <div class="hero-cta">
+          <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="contact-hero">Call {SITE.phoneDisplay}</a>
+        </div>
+      </div>
+      <img src="/images/roofing/roofing-contact-call.png" alt="Homeowner calling for roofing help with shingle samples on a table" width="1536" height="1024" loading="eager" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card contact-info">
+        <h2>Reach Us Directly</h2>
+        <p><strong>Phone:</strong><br /><a href={SITE.phoneHref} class="big-phone" data-cta="contact-phone">{SITE.phoneDisplay}</a></p>
+        <p><strong>Email:</strong><br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></p>
+        <p><strong>Common calls:</strong> roof leaks, missing shingles, storm damage review, roof inspection, repair estimate, and replacement estimate.</p>
+        <p class="muted">No public street address is shown until a verified business address is supplied.</p>
+      </article>
+
+      <article class="card contact-form">
+        <h2>Request Roofing Help Online</h2>
+        <form name="contact" method="POST" action="/contact-thanks" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden"><label>Do not fill this: <input name="bot-field" /></label></p>
+          <div class="field"><label for="name">Your Name *</label><input id="name" name="name" type="text" required autocomplete="name" /></div>
+          <div class="field"><label for="phone">Phone Number *</label><input id="phone" name="phone" type="tel" required autocomplete="tel" /></div>
+          <div class="field"><label for="zip">ZIP Code *</label><input id="zip" name="zip" type="text" required pattern="[0-9]{5}" /></div>
+          <div class="field">
+            <label for="service">Roofing Help Needed</label>
+            <select id="service" name="service">
+              <option>Roof Leak Repair</option>
+              <option>Emergency Roof Repair</option>
+              <option>Storm Damage Roof Repair</option>
+              <option>Roof Inspection</option>
+              <option>Roof Replacement</option>
+              <option>Not Sure</option>
+            </select>
+          </div>
+          <div class="field"><label for="message">What are you seeing?</label><textarea id="message" name="message" rows="4" placeholder="Leak location, missing shingles, storm date, ceiling stain, roof age, etc."></textarea></div>
+          <button type="submit" class="btn btn-primary btn-large">Send Request</button>
+        </form>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head"><h2>Areas We Cover</h2></div>
+      <p class="center">{SERVICE_AREAS.map(area => `${area.name}, KY`).join(' · ')}</p>
+    </div>
+  </section>
+</BaseLayout>
