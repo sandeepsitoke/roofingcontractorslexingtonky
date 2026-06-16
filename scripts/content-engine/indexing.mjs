@@ -16,7 +16,7 @@ const CONTENT_STATE_PATH = 'content-engine/state.json';
 await loadLocalEnv();
 
 const args = parseArgs(process.argv.slice(2));
-const mode = args.inspect ? 'inspect' : 'submit';
+const mode = args.inspect ? 'inspect' : args['google-indexing'] ? 'google-indexing' : 'submit';
 const force = Boolean(args.force);
 const dryRun = Boolean(args['dry-run']);
 const latest = Boolean(args.latest);
@@ -31,6 +31,9 @@ const state = await readIndexingState();
 
 if (mode === 'inspect') {
   await inspectUrls(urls, state);
+} else if (mode === 'google-indexing') {
+  for (const url of urls) ensureUrlRecord(state, url);
+  await submitGoogleIndexingApi(urls, state, { dryRun });
 } else {
   await submitUrls(urls, state, { force, dryRun });
 }
@@ -175,6 +178,25 @@ async function submitGoogleAggressive(selectedUrls, stateValue, options) {
     return;
   }
 
+  await submitGoogleIndexingApi(selectedUrls, stateValue, options);
+}
+
+async function submitGoogleIndexingApi(selectedUrls, stateValue, options) {
+  for (const url of selectedUrls) {
+    ensureUrlRecord(stateValue, url);
+    const endpoint = 'https://indexing.googleapis.com/v3/urlNotifications:publish';
+    const payload = { url, type: process.env.GOOGLE_INDEXING_TYPE || 'URL_UPDATED' };
+    if (options.dryRun) {
+      console.log(JSON.stringify({ provider: 'google-indexing-api', endpoint, payload }, null, 2));
+      stateValue.urls[url].googleAggressiveIndexing = {
+        status: 'dry-run',
+        submittedAt: new Date().toISOString(),
+      };
+    }
+  }
+
+  if (options.dryRun) return;
+
   const token = await getGoogleAccessToken(GOOGLE_INDEXING_SCOPE);
   if (!token) {
     markBatchStatus(stateValue, selectedUrls, 'googleAggressiveIndexing', {
@@ -187,16 +209,7 @@ async function submitGoogleAggressive(selectedUrls, stateValue, options) {
 
   for (const url of selectedUrls) {
     const endpoint = 'https://indexing.googleapis.com/v3/urlNotifications:publish';
-    const payload = { url, type: 'URL_UPDATED' };
-    if (options.dryRun) {
-      console.log(JSON.stringify({ provider: 'google-indexing-api', endpoint, payload }, null, 2));
-      stateValue.urls[url].googleAggressiveIndexing = {
-        status: 'dry-run',
-        submittedAt: new Date().toISOString(),
-      };
-      continue;
-    }
-
+    const payload = { url, type: process.env.GOOGLE_INDEXING_TYPE || 'URL_UPDATED' };
     try {
       const response = await fetch(endpoint, {
         method: 'POST',
@@ -210,13 +223,15 @@ async function submitGoogleAggressive(selectedUrls, stateValue, options) {
       stateValue.urls[url].googleAggressiveIndexing = {
         status: response.ok ? 'submitted' : 'failed',
         submittedAt: new Date().toISOString(),
+        endpoint,
+        requestType: payload.type,
         responseCode: response.status,
-        responseText: responseText.slice(0, 500),
+        responseText: responseText.slice(0, 1000),
       };
-      console.log(`Google aggressive Indexing API returned ${response.status} for ${url}.`);
+      console.log(`Google Indexing API returned ${response.status} for ${url}.`);
     } catch (error) {
       markUrlError(stateValue, url, 'googleAggressiveIndexing', error.message);
-      console.warn(`Google aggressive Indexing API failed for ${url}: ${error.message}`);
+      console.warn(`Google Indexing API failed for ${url}: ${error.message}`);
     }
   }
 }
@@ -281,6 +296,10 @@ async function resolveUrls(parsedArgs, useLatest) {
     return explicit;
   }
 
+  if (parsedArgs.sitemap) {
+    return readUrlsFromSitemap(process.env.GOOGLE_SITEMAP_URL || DEFAULT_SITEMAP_URL);
+  }
+
   if (useLatest || parsedArgs.latest) {
     const contentState = await readJson(CONTENT_STATE_PATH);
     return (contentState.generated || [])
@@ -289,6 +308,16 @@ async function resolveUrls(parsedArgs, useLatest) {
   }
 
   return [];
+}
+
+
+async function readUrlsFromSitemap(sitemapUrl) {
+  const response = await fetch(sitemapUrl);
+  if (!response.ok) {
+    throw new Error(`Could not fetch sitemap ${sitemapUrl}: ${response.status}`);
+  }
+  const xml = await response.text();
+  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
 }
 
 function collectUrlArgs(argv) {
