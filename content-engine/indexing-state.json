@@ -8,21 +8,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:33.417Z",
+        "submittedAt": "2026-06-18T17:25:22.471Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -30,26 +30,23 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:42:49.563Z",
+        "lastInspectionAt": "2026-06-18T17:25:45.732Z",
         "responseCode": 200,
         "verdict": "PASS",
         "coverageState": "Submitted and indexed",
         "indexingState": "INDEXING_ALLOWED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=KcfreupCdgnyUV-b0bSxZA&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=kxcYR9a17bE5VJli9F6lRA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "PASS",
               "coverageState": "Submitted and indexed",
               "robotsTxtState": "ALLOWED",
               "indexingState": "INDEXING_ALLOWED",
-              "lastCrawlTime": "2026-06-16T11:39:04Z",
+              "lastCrawlTime": "2026-06-18T13:10:58Z",
               "pageFetchState": "SUCCESSFUL",
               "googleCanonical": "https://roofingcontractorslexingtonky.com/",
               "userCanonical": "https://roofingcontractorslexingtonky.com/",
-              "sitemap": [
-                "https://roofingcontractorslexingtonky.com/sitemap-0.xml"
-              ],
               "referringUrls": [
                 "http://roofingcontractorslexingtonky.com/",
                 "https://roofingcontractorslexingtonky.com/sitemap.xml"
@@ -74,6 +71,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:12.411Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 1637,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/",
+        "title": "Roofing Contractors Lexington KY | Roof Repair &amp; Replacement"
       }
     },
     "https://roofingcontractorslexingtonky.com/blog/": {
@@ -84,21 +94,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:34.844Z",
+        "submittedAt": "2026-06-18T17:25:23.847Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -106,14 +116,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:03.884Z",
+        "lastInspectionAt": "2026-06-18T17:25:59.751Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=rVAegQMsV2aM6X2t8yuheQ&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=oc13vjNpgrdSaE4I-iVYXA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -130,6 +140,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/blog/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:11.321Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/blog/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 497,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/blog/",
+        "title": "Lexington Roofing Blog | Roof Repair &amp; Storm Damage Tips | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/blog/roof-leak-after-storm-lexington/": {
@@ -140,21 +163,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:35.206Z",
+        "submittedAt": "2026-06-18T17:25:24.190Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -162,14 +185,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:10.691Z",
+        "lastInspectionAt": "2026-06-18T17:26:06.654Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=kf3ZvqKvPTs8PWFBm2bSXQ&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=V3yYa5LR4Y9AGmut4-b7xA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -186,6 +209,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/blog/roof-leak-after-storm-lexington/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:11.379Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/blog/roof-leak-after-storm-lexington/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 554,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/blog/roof-leak-after-storm-lexington/",
+        "title": "What to Do When Your Roof Leaks After a Lexington Storm | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/contact/": {
@@ -196,21 +232,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:35.537Z",
+        "submittedAt": "2026-06-18T17:25:24.745Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -218,26 +254,43 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:17.897Z",
+        "lastInspectionAt": "2026-06-18T17:26:13.337Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=qycL1sJPYV8gsIamk171EQ&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=h8il-aQ5FY-0kY83HskBUg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
-              "coverageState": "URL is unknown to Google",
+              "coverageState": "Discovered - currently not indexed",
               "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
               "indexingState": "INDEXING_STATE_UNSPECIFIED",
-              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+              "sitemap": [
+                "https://roofingcontractorslexingtonky.com/sitemap-0.xml"
+              ],
+              "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
             },
             "mobileUsabilityResult": {
               "verdict": "VERDICT_UNSPECIFIED"
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/contact/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:12.758Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/contact/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 346,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/contact/",
+        "title": "Contact Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/emergency-roof-repair/": {
@@ -248,21 +301,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:35.860Z",
+        "submittedAt": "2026-06-18T17:25:25.113Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -270,14 +323,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:24.830Z",
+        "lastInspectionAt": "2026-06-18T17:26:20.110Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=-wATddqgntrpVpPJsClq0w&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=Itp3RY1s1kMWMbOcSTg9qg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -297,6 +350,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/emergency-roof-repair/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:12.773Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/emergency-roof-repair/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 360,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/emergency-roof-repair/",
+        "title": "Emergency Roof Repair in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-inspection/": {
@@ -307,21 +373,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:37.692Z",
+        "submittedAt": "2026-06-18T17:25:32.632Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -329,14 +395,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:07.490Z",
+        "lastInspectionAt": "2026-06-18T17:27:02.332Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=QAyR-XA8MhpbxxgBSNLONg&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=O8v8RBYXYpml8iQ85GGKVA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -353,6 +419,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-inspection/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.060Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-inspection/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 286,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-inspection/",
+        "title": "Roof Inspection in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-leak-repair/": {
@@ -363,21 +442,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:38.303Z",
+        "submittedAt": "2026-06-18T17:25:33.281Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -385,14 +464,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:21.534Z",
+        "lastInspectionAt": "2026-06-18T17:27:16.587Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=DtA2Tbx33Bmp3s1SZUq-wA&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=GCz6tzgC8lLISgzWYT7SLw&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -409,6 +488,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-leak-repair/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.518Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-leak-repair/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 295,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-leak-repair/",
+        "title": "Roof Leak Repair in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-repair/": {
@@ -419,21 +511,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:38.905Z",
+        "submittedAt": "2026-06-18T17:25:33.899Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -441,14 +533,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:35.451Z",
+        "lastInspectionAt": "2026-06-18T17:27:30.610Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=pQsr_ExmMNcObRT6OWxf9Q&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=PdIyNINTsbU6m0qAgad6xQ&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -465,6 +557,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-repair/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.517Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-repair/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 293,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-repair/",
+        "title": "Roof Repair in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-replacement/": {
@@ -475,21 +580,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:39.205Z",
+        "submittedAt": "2026-06-18T17:25:34.206Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -497,14 +602,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:42.602Z",
+        "lastInspectionAt": "2026-06-18T17:27:37.540Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=hUBt0saSGWq4Q8Z2kwJhwg&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=C6ebuvsFrjH8vYckxa7EYQ&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -521,6 +626,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-replacement/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:14.661Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-replacement/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 855,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-replacement/",
+        "title": "Roof Replacement in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/service-areas/": {
@@ -531,21 +649,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:39.817Z",
+        "submittedAt": "2026-06-18T17:25:34.819Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -553,14 +671,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:56.976Z",
+        "lastInspectionAt": "2026-06-18T17:27:53.415Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=5WPjtd1tT72IBZ-hJO-ckw&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=2JMSfRp6omCcAqZoWgVGSw&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -577,6 +695,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/service-areas/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:14.097Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/service-areas/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 290,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/service-areas/",
+        "title": "Roofing Service Areas Near Lexington KY | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/service-areas/georgetown-roofing/": {
@@ -587,21 +718,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:40.115Z",
+        "submittedAt": "2026-06-18T17:25:35.123Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -609,14 +740,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:04.049Z",
+        "lastInspectionAt": "2026-06-18T17:28:00.327Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=DeeCo-9nTaXjXXTJchSuMQ&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=_LbBncsU24cThlLD8CXnlQ&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -633,6 +764,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/service-areas/georgetown-roofing/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:14.094Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/service-areas/georgetown-roofing/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 287,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/service-areas/georgetown-roofing/",
+        "title": "Roofing Contractors in Georgetown, KY | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/service-areas/nicholasville-roofing/": {
@@ -643,21 +787,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:40.413Z",
+        "submittedAt": "2026-06-18T17:25:35.434Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -665,14 +809,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:11.037Z",
+        "lastInspectionAt": "2026-06-18T17:28:07.245Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=BnUsdLR9ru45y6yvMAResw&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=kcoDCszrrLyNxko9cC3uhA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -692,6 +836,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/service-areas/nicholasville-roofing/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:15.596Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/service-areas/nicholasville-roofing/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 935,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/service-areas/nicholasville-roofing/",
+        "title": "Roofing Contractors in Nicholasville, KY | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/service-areas/richmond-roofing/": {
@@ -702,21 +859,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:40.714Z",
+        "submittedAt": "2026-06-18T17:25:36.614Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -724,14 +881,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:17.997Z",
+        "lastInspectionAt": "2026-06-18T17:28:14.002Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=MqRT_0ImS706hUnLfrryqQ&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=1gE3Zurzo_PCEn6W_Pf35Q&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -748,6 +905,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/service-areas/richmond-roofing/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:15.057Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/service-areas/richmond-roofing/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 395,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/service-areas/richmond-roofing/",
+        "title": "Roofing Contractors in Richmond, KY | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/service-areas/versailles-roofing/": {
@@ -758,21 +928,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:41.011Z",
+        "submittedAt": "2026-06-18T17:25:36.945Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -780,14 +950,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:24.978Z",
+        "lastInspectionAt": "2026-06-18T17:28:20.922Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=Ga_bLL1T0wZv1XxMjGYyMg&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=wAx_luKiEH-F55bHKWITyA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -804,6 +974,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/service-areas/versailles-roofing/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:14.976Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/service-areas/versailles-roofing/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 314,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/service-areas/versailles-roofing/",
+        "title": "Roofing Contractors in Versailles, KY | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/service-areas/winchester-roofing/": {
@@ -814,21 +997,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:41.306Z",
+        "submittedAt": "2026-06-18T17:25:37.257Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -836,14 +1019,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:31.954Z",
+        "lastInspectionAt": "2026-06-18T17:28:28.032Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=ukEgyHlAPqVxkto2MMxQ7Q&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=fSXxjKeGPv3fjt_KEImaHg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -860,6 +1043,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/service-areas/winchester-roofing/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:14.948Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/service-areas/winchester-roofing/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 286,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/service-areas/winchester-roofing/",
+        "title": "Roofing Contractors in Winchester, KY | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/storm-damage-roof-repair/": {
@@ -870,21 +1066,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:41.603Z",
+        "submittedAt": "2026-06-18T17:25:37.558Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -892,14 +1088,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:38.957Z",
+        "lastInspectionAt": "2026-06-18T17:28:34.979Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=vL7IGQ7y4WzjWClRBdGdfg&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=FnZ-LaoZKq-vhWLP_fgRsA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -916,6 +1112,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/storm-damage-roof-repair/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:16.160Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/storm-damage-roof-repair/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 564,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/storm-damage-roof-repair/",
+        "title": "Storm Damage Roof Repair in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/24-hour-roofer-lexington-ky/": {
@@ -926,21 +1135,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:33.753Z",
+        "submittedAt": "2026-06-18T17:25:22.873Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -948,26 +1157,43 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:42:56.532Z",
+        "lastInspectionAt": "2026-06-18T17:25:52.819Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=9BXr5J41SCPqXF8GdXFxZg&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=l_TLCpdrYVMQl_Z3rYWoVA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
-              "coverageState": "URL is unknown to Google",
+              "coverageState": "Discovered - currently not indexed",
               "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
               "indexingState": "INDEXING_STATE_UNSPECIFIED",
-              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+              "sitemap": [
+                "https://roofingcontractorslexingtonky.com/sitemap-0.xml"
+              ],
+              "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
             },
             "mobileUsabilityResult": {
               "verdict": "VERDICT_UNSPECIFIED"
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/24-hour-roofer-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:11.234Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/24-hour-roofer-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 414,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/24-hour-roofer-lexington-ky/",
+        "title": "24-Hour Roofer in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/emergency-roof-tarping-lexington-ky/": {
@@ -978,21 +1204,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:36.174Z",
+        "submittedAt": "2026-06-18T17:25:25.453Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1000,14 +1226,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:31.787Z",
+        "lastInspectionAt": "2026-06-18T17:26:26.847Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=oUdQctFQbaDe-LYnpTGoLA&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=jAcaW8ChOW2DXT-tkCMWPg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -1024,6 +1250,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/emergency-roof-tarping-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:12.697Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/emergency-roof-tarping-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 284,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/emergency-roof-tarping-lexington-ky/",
+        "title": "Emergency Roof Tarping in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/free-roof-inspection-lexington-ky/": {
@@ -1034,21 +1273,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:36.482Z",
+        "submittedAt": "2026-06-18T17:25:25.757Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1056,14 +1295,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:38.875Z",
+        "lastInspectionAt": "2026-06-18T17:26:33.969Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=UYLucI3AinVo556Wbzb4Aw&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=u04ZPFx-iIAZSygGBSoCLQ&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -1080,6 +1319,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/free-roof-inspection-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:12.717Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/free-roof-inspection-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 303,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/free-roof-inspection-lexington-ky/",
+        "title": "Free Roof Inspection in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/hail-damaged-roof-lexington-ky/": {
@@ -1090,21 +1342,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:36.778Z",
+        "submittedAt": "2026-06-18T17:25:26.105Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1112,14 +1364,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:46.367Z",
+        "lastInspectionAt": "2026-06-18T17:26:40.922Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=zImWcArr4i00SiWTjTwD-Q&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=akG9fQq_8PoaLbwMd9YqGA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -1136,6 +1388,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/hail-damaged-roof-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.222Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/hail-damaged-roof-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 449,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/hail-damaged-roof-lexington-ky/",
+        "title": "Hail Damaged Roof in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/missing-shingles-lexington-ky/": {
@@ -1146,21 +1411,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:37.074Z",
+        "submittedAt": "2026-06-18T17:25:26.421Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1168,14 +1433,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:43:53.460Z",
+        "lastInspectionAt": "2026-06-18T17:26:47.852Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=yIBmXGE-D5p7cltv493xaQ&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=oBPY9K57VOfREgDkYHJkBg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -1192,6 +1457,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/missing-shingles-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.091Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/missing-shingles-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 317,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/missing-shingles-lexington-ky/",
+        "title": "Missing Shingles in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-financing-lexington-ky/": {
@@ -1202,21 +1480,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:37.394Z",
+        "submittedAt": "2026-06-18T17:25:32.292Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1224,26 +1502,43 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:00.588Z",
+        "lastInspectionAt": "2026-06-18T17:26:55.037Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=Se647dHxDUMUO4-CcoXxqA&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=D4hXVBl9jNOQofjFR4umFg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
-              "coverageState": "URL is unknown to Google",
+              "coverageState": "Discovered - currently not indexed",
               "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
               "indexingState": "INDEXING_STATE_UNSPECIFIED",
-              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+              "sitemap": [
+                "https://roofingcontractorslexingtonky.com/sitemap-0.xml"
+              ],
+              "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
             },
             "mobileUsabilityResult": {
               "verdict": "VERDICT_UNSPECIFIED"
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-financing-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.038Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-financing-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 264,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-financing-lexington-ky/",
+        "title": "Roof Financing in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-insurance-claim-help-lexington-ky/": {
@@ -1254,21 +1549,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:37.988Z",
+        "submittedAt": "2026-06-18T17:25:32.957Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1276,14 +1571,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:14.416Z",
+        "lastInspectionAt": "2026-06-18T17:27:09.255Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=OJVKBIIivdhJCaNNbcTpGw&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=jiWKNeUyOwVQtJo0vIKrNA&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -1300,6 +1595,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-insurance-claim-help-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.806Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-insurance-claim-help-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 584,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-insurance-claim-help-lexington-ky/",
+        "title": "Roof Insurance Claim Help in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/": {
@@ -1310,21 +1618,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:38.600Z",
+        "submittedAt": "2026-06-18T17:25:33.587Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1332,30 +1640,56 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:28.487Z",
+        "lastInspectionAt": "2026-06-18T17:27:23.683Z",
         "responseCode": 200,
-        "verdict": "NEUTRAL",
-        "coverageState": "Discovered - currently not indexed",
-        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "indexingState": "INDEXING_ALLOWED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=WmV11IHyFVlD79ac_62iUw&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=3xB-8BEzo-LWhRjH8MA1Dg&utm_medium=link&utm_source=api",
             "indexStatusResult": {
-              "verdict": "NEUTRAL",
-              "coverageState": "Discovered - currently not indexed",
-              "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-              "indexingState": "INDEXING_STATE_UNSPECIFIED",
-              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
-              "sitemap": [
-                "https://roofingcontractorslexingtonky.com/sitemap-0.xml"
-              ],
-              "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
+              "verdict": "PASS",
+              "coverageState": "Submitted and indexed",
+              "robotsTxtState": "ALLOWED",
+              "indexingState": "INDEXING_ALLOWED",
+              "lastCrawlTime": "2026-06-18T10:32:04Z",
+              "pageFetchState": "SUCCESSFUL",
+              "googleCanonical": "https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/",
+              "userCanonical": "https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/",
+              "crawledAs": "MOBILE"
             },
             "mobileUsabilityResult": {
               "verdict": "VERDICT_UNSPECIFIED"
+            },
+            "richResultsResult": {
+              "verdict": "PASS",
+              "detectedItems": [
+                {
+                  "richResultType": "Breadcrumbs",
+                  "items": [
+                    {
+                      "name": "Unnamed item"
+                    }
+                  ]
+                }
+              ]
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:13.336Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 113,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/",
+        "title": "Roof Leaking After Storm in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/same-day-roof-repair-lexington-ky/": {
@@ -1366,21 +1700,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:39.522Z",
+        "submittedAt": "2026-06-18T17:25:34.515Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1388,14 +1722,14 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:44:49.550Z",
+        "lastInspectionAt": "2026-06-18T17:27:45.266Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
         "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=ooYMvrM0DFyXM6Eo5-Nslw&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=7BkfDXvOdy1ASBxThxom-g&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
               "coverageState": "Discovered - currently not indexed",
@@ -1412,6 +1746,19 @@
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/same-day-roof-repair-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:14.116Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/same-day-roof-repair-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 310,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/same-day-roof-repair-lexington-ky/",
+        "title": "Same-Day Roof Repair in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     },
     "https://roofingcontractorslexingtonky.com/water-stains-on-ceiling-lexington-ky/": {
@@ -1422,21 +1769,21 @@
       "errors": [],
       "indexNow": {
         "status": "accepted",
-        "submittedAt": "2026-06-18T08:42:30.983Z",
+        "submittedAt": "2026-06-18T17:25:18.109Z",
         "endpoint": "https://api.indexnow.org/indexnow",
         "responseCode": 200,
         "responseText": ""
       },
       "googleSitemap": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:31.749Z",
+        "submittedAt": "2026-06-18T17:25:20.837Z",
         "sitemapUrl": "https://roofingcontractorslexingtonky.com/sitemap-0.xml",
         "responseCode": 204,
         "responseText": ""
       },
       "googleAggressiveIndexing": {
         "status": "submitted",
-        "submittedAt": "2026-06-18T08:42:41.903Z",
+        "submittedAt": "2026-06-18T17:25:37.875Z",
         "endpoint": "https://indexing.googleapis.com/v3/urlNotifications:publish",
         "requestType": "URL_UPDATED",
         "responseCode": 200,
@@ -1444,28 +1791,45 @@
       },
       "googleInspection": {
         "status": "inspected",
-        "lastInspectionAt": "2026-06-18T08:45:45.935Z",
+        "lastInspectionAt": "2026-06-18T17:28:42.013Z",
         "responseCode": 200,
         "verdict": "NEUTRAL",
-        "coverageState": "URL is unknown to Google",
+        "coverageState": "Discovered - currently not indexed",
         "indexingState": "INDEXING_STATE_UNSPECIFIED",
         "raw": {
           "inspectionResult": {
-            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=cjUYmKkeb6giBdH4AL25VA&utm_medium=link&utm_source=api",
+            "inspectionResultLink": "https://search.google.com/search-console/inspect?resource_id=https://roofingcontractorslexingtonky.com/&id=em4zh0gL0ZB213zhZenTpQ&utm_medium=link&utm_source=api",
             "indexStatusResult": {
               "verdict": "NEUTRAL",
-              "coverageState": "URL is unknown to Google",
+              "coverageState": "Discovered - currently not indexed",
               "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
               "indexingState": "INDEXING_STATE_UNSPECIFIED",
-              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED"
+              "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+              "sitemap": [
+                "https://roofingcontractorslexingtonky.com/sitemap-0.xml"
+              ],
+              "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED"
             },
             "mobileUsabilityResult": {
               "verdict": "VERDICT_UNSPECIFIED"
             }
           }
         }
+      },
+      "liveTest": {
+        "url": "https://roofingcontractorslexingtonky.com/water-stains-on-ceiling-lexington-ky/",
+        "status": "live-ok",
+        "checkedAt": "2026-06-18T17:25:15.928Z",
+        "responseCode": 200,
+        "finalUrl": "https://roofingcontractorslexingtonky.com/water-stains-on-ceiling-lexington-ky/",
+        "contentType": "text/html; charset=utf-8",
+        "contentLength": null,
+        "durationMs": 332,
+        "robotsNoIndex": false,
+        "canonical": "https://roofingcontractorslexingtonky.com/water-stains-on-ceiling-lexington-ky/",
+        "title": "Water Stains on Ceiling in Lexington, KY | Lexington KY Roofing Contractors | Roofing Contractors Lexington KY"
       }
     }
   },
-  "updatedAt": "2026-06-18T08:45:38.958Z"
+  "updatedAt": "2026-06-18T17:28:34.979Z"
 }
