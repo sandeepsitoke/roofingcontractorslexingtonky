@@ -11,12 +11,13 @@ const GOOGLE_INDEXING_SCOPE = 'https://www.googleapis.com/auth/indexing';
 const DEFAULT_SITE_URL = 'https://roofingcontractorslexingtonky.com';
 const DEFAULT_SITEMAP_URL = 'https://roofingcontractorslexingtonky.com/sitemap-0.xml';
 const STATE_PATH = 'content-engine/indexing-state.json';
+const REPORT_PATH = 'content-engine/indexing-report.json';
 const CONTENT_STATE_PATH = 'content-engine/state.json';
 
 await loadLocalEnv();
 
 const args = parseArgs(process.argv.slice(2));
-const mode = args.inspect ? 'inspect' : args['google-indexing'] ? 'google-indexing' : 'submit';
+const mode = args.autopilot ? 'autopilot' : args.inspect ? 'inspect' : args['google-indexing'] ? 'google-indexing' : 'submit';
 const force = Boolean(args.force);
 const dryRun = Boolean(args['dry-run']);
 const latest = Boolean(args.latest);
@@ -29,7 +30,9 @@ if (urls.length === 0) {
 
 const state = await readIndexingState();
 
-if (mode === 'inspect') {
+if (mode === 'autopilot') {
+  await runAutopilot(urls, state, { force: true, dryRun });
+} else if (mode === 'inspect') {
   await inspectUrls(urls, state);
 } else if (mode === 'google-indexing') {
   for (const url of urls) ensureUrlRecord(state, url);
@@ -39,6 +42,115 @@ if (mode === 'inspect') {
 }
 
 await writeJson(STATE_PATH, state);
+
+async function runAutopilot(selectedUrls, stateValue, options) {
+  console.log(`Indexing autopilot selected ${selectedUrls.length} sitemap URL(s).`);
+  for (const url of selectedUrls) ensureUrlRecord(stateValue, url);
+
+  const liveResults = await liveTestUrls(selectedUrls, stateValue, options);
+  const liveOkUrls = selectedUrls.filter(url => liveResults.get(url)?.status === 'live-ok');
+  const blockedUrls = selectedUrls.filter(url => liveResults.get(url)?.status !== 'live-ok');
+
+  if (blockedUrls.length > 0) {
+    console.warn(`Autopilot blocked ${blockedUrls.length} URL(s) because live tests did not pass.`);
+  }
+
+  if (liveOkUrls.length === 0) {
+    console.warn('Autopilot stopped: no URLs passed the live test.');
+    await writeIndexingReport(stateValue, selectedUrls, {
+      mode: 'autopilot',
+      submittedUrls: [],
+      blockedUrls,
+    });
+    return;
+  }
+
+  await submitUrls(liveOkUrls, stateValue, options);
+  await writeIndexingReport(stateValue, selectedUrls, {
+    mode: 'autopilot',
+    submittedUrls: liveOkUrls,
+    blockedUrls,
+  });
+}
+
+async function liveTestUrls(selectedUrls, stateValue, options = {}) {
+  const results = new Map();
+  const concurrency = Math.max(1, Number(process.env.INDEXING_LIVE_CONCURRENCY || 4));
+  for (let index = 0; index < selectedUrls.length; index += concurrency) {
+    const batch = selectedUrls.slice(index, index + concurrency);
+    const batchResults = await Promise.all(batch.map(url => liveTestUrl(url, stateValue, options)));
+    for (const result of batchResults) {
+      results.set(result.url, result);
+    }
+  }
+  return results;
+}
+
+async function liveTestUrl(url, stateValue, options = {}) {
+  ensureUrlRecord(stateValue, url);
+  const startedAt = Date.now();
+
+  if (options.dryRun) {
+    const result = {
+      url,
+      status: 'live-ok',
+      dryRun: true,
+      checkedAt: new Date().toISOString(),
+      responseCode: null,
+    };
+    stateValue.urls[url].liveTest = result;
+    console.log(`Live test dry-run for ${url}.`);
+    return result;
+  }
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      redirect: 'follow',
+      signal: AbortSignal.timeout(Number(process.env.INDEXING_LIVE_TIMEOUT_MS || 20000)),
+      headers: {
+        'user-agent': 'Mozilla/5.0 compatible; LeadGenIndexingBot/1.0; +https://roofingcontractorslexingtonky.com/llms.txt',
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      },
+    });
+
+    const contentType = response.headers.get('content-type') || '';
+    const html = contentType.includes('text/html') ? await response.text() : '';
+    const robotsNoIndex = /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)
+      || /<meta[^>]+content=["'][^"']*noindex[^"']*["'][^>]+name=["']robots["']/i.test(html);
+    const canonical = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i)?.[1] || null;
+    const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.replace(/\s+/g, ' ').trim() || null;
+    const ok = response.ok && !robotsNoIndex;
+    const result = {
+      url,
+      status: ok ? 'live-ok' : 'blocked',
+      checkedAt: new Date().toISOString(),
+      responseCode: response.status,
+      finalUrl: response.url,
+      contentType,
+      contentLength: Number(response.headers.get('content-length')) || null,
+      durationMs: Date.now() - startedAt,
+      robotsNoIndex,
+      canonical,
+      title,
+    };
+    stateValue.urls[url].liveTest = result;
+    console.log(`Live test ${result.status} ${response.status} for ${url}.`);
+    return result;
+  } catch (error) {
+    const result = {
+      url,
+      status: 'failed',
+      checkedAt: new Date().toISOString(),
+      error: error.message,
+      durationMs: Date.now() - startedAt,
+    };
+    stateValue.urls[url].liveTest = result;
+    markUrlError(stateValue, url, 'liveTest', error.message);
+    console.warn(`Live test failed for ${url}: ${error.message}`);
+    return result;
+  }
+}
 
 async function submitUrls(selectedUrls, stateValue, options) {
   const pendingUrls = options.force
@@ -296,7 +408,7 @@ async function resolveUrls(parsedArgs, useLatest) {
     return explicit;
   }
 
-  if (parsedArgs.sitemap) {
+  if (parsedArgs.sitemap || parsedArgs.autopilot) {
     return readUrlsFromSitemap(process.env.GOOGLE_SITEMAP_URL || DEFAULT_SITEMAP_URL);
   }
 
@@ -308,6 +420,71 @@ async function resolveUrls(parsedArgs, useLatest) {
   }
 
   return [];
+}
+
+async function writeIndexingReport(stateValue, selectedUrls, context) {
+  const report = {
+    ok: context.blockedUrls.length === 0,
+    mode: context.mode,
+    checkedAt: new Date().toISOString(),
+    sitemapUrl: process.env.GOOGLE_SITEMAP_URL || DEFAULT_SITEMAP_URL,
+    selectedCount: selectedUrls.length,
+    submittedCount: context.submittedUrls.length,
+    blockedCount: context.blockedUrls.length,
+    urls: selectedUrls.map(url => {
+      const record = stateValue.urls[url] || {};
+      return {
+        url,
+        liveTest: summarizeLiveTest(record.liveTest),
+        indexNow: summarizeProvider(record.indexNow),
+        googleSitemap: summarizeProvider(record.googleSitemap),
+        googleAggressiveIndexing: summarizeProvider(record.googleAggressiveIndexing),
+        googleInspection: summarizeInspection(record.googleInspection),
+      };
+    }),
+  };
+  await writeJson(REPORT_PATH, report);
+  console.log(`Indexing report written to ${REPORT_PATH}.`);
+}
+
+function summarizeLiveTest(value) {
+  if (!value) return null;
+  return {
+    status: value.status,
+    responseCode: value.responseCode || null,
+    finalUrl: value.finalUrl || null,
+    robotsNoIndex: Boolean(value.robotsNoIndex),
+    canonical: value.canonical || null,
+    durationMs: value.durationMs || null,
+    checkedAt: value.checkedAt || null,
+    error: value.error || null,
+  };
+}
+
+function summarizeProvider(value) {
+  if (!value) return null;
+  return {
+    status: value.status || null,
+    responseCode: value.responseCode || null,
+    submittedAt: value.submittedAt || null,
+    requestType: value.requestType || null,
+    reason: value.reason || null,
+    error: value.error || null,
+  };
+}
+
+function summarizeInspection(value) {
+  if (!value) return null;
+  return {
+    status: value.status || null,
+    responseCode: value.responseCode || null,
+    verdict: value.verdict || null,
+    coverageState: value.coverageState || null,
+    indexingState: value.indexingState || null,
+    lastInspectionAt: value.lastInspectionAt || null,
+    reason: value.reason || null,
+    error: value.error || null,
+  };
 }
 
 

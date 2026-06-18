@@ -7,8 +7,8 @@ export default defineConfig({
   site: 'https://roofingcontractorslexingtonky.com',
   integrations: [
     sitemap({
-      changefreq: 'weekly',
-      priority: 0.7,
+      changefreq: 'always',
+      priority: 1.0,
       lastmod: new Date(),
     }),
     mdx(),

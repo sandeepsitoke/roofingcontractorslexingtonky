@@ -18,6 +18,7 @@
     "content:index:latest": "node scripts/content-engine/indexing.mjs --latest",
     "content:index:inspect": "node scripts/content-engine/indexing.mjs --inspect --latest",
     "content:index:google": "node scripts/content-engine/indexing.mjs --google-indexing --sitemap",
+    "content:index:autopilot": "node scripts/content-engine/indexing.mjs --autopilot --sitemap --force",
     "content:dry-run": "node scripts/content-engine/generate.mjs --queue --dry-run"
   },
   "dependencies": {
