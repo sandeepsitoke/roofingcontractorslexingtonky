@@ -62,7 +62,7 @@ const breadcrumbSchema = {
             <img src={service.image} alt={service.alt} width="1536" height="1024" loading="lazy" />
             <h3>{service.title}</h3>
             <p>{service.short}</p>
-            <a class="more" href={`/${service.slug}`}>Learn more</a>
+            <a class="more" href={`/${service.slug}`}>Learn about {service.title.toLowerCase()} in Lexington</a>
           </article>
         ))}
       </div>
@@ -97,7 +97,7 @@ const breadcrumbSchema = {
             <img src={page.image} alt={page.alt} width="1536" height="1024" loading="lazy" />
             <h3>{page.title}</h3>
             <p>{page.short}</p>
-            <a class="more" href={`/${page.slug}`}>Get help</a>
+            <a class="more" href={`/${page.slug}`}>Get help for {page.title.toLowerCase()}</a>
           </article>
         ))}
       </div>

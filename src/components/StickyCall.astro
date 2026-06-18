@@ -1,7 +1,7 @@
 ---
 import { SITE } from '../site.config';
 ---
-<div class="sticky-call" id="stickyCall" aria-hidden="true">
+<div class="sticky-call" aria-hidden="true">
   <a href={SITE.phoneHref} data-cta="sticky-mobile">
     <span aria-hidden="true">📞</span> Call Now: {SITE.phoneDisplay}
   </a>
@@ -23,18 +23,7 @@ import { SITE } from '../site.config';
     font-weight: 700; font-size: 1.05rem;
   }
   @media (max-width: 768px) {
-    .sticky-call.is-visible { display: block; }
+    .sticky-call { display: block; }
+    body { padding-bottom: 4.25rem; }
   }
 </style>
-
-<script>
-  const el = document.getElementById('stickyCall');
-  if (el && window.innerWidth <= 768) {
-    const onScroll = () => {
-      if (window.scrollY > 320) el.classList.add('is-visible');
-      else el.classList.remove('is-visible');
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-  }
-</script>

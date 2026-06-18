@@ -14,11 +14,8 @@ export default defineConfig({
     mdx(),
   ],
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
   compressHTML: true,
-  prefetch: {
-    prefetchAll: false,
-    defaultStrategy: 'hover',
-  },
+  prefetch: false,
 });

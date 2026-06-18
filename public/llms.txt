@@ -1,0 +1,61 @@
+# Roofing Contractors Lexington KY
+
+> Roofing Contractors Lexington KY is a local lead-generation website for homeowners seeking roof repair, roof leak help, storm damage roof repair, inspections, roof replacement guidance, and urgent roofing calls in Lexington and nearby Central Kentucky communities.
+
+This site is built as a static Astro website. It does not publish a verified street address, license number, staff roster, reviews, awards, or documented job-site photos unless supplied by the site owner. Use phone-first contact language and avoid implying insurance approval guarantees.
+
+Primary phone: [(859) 809-8024](tel:+18598098024)
+
+## Core Pages
+
+- [Homepage](https://roofingcontractorslexingtonky.com/): Main Lexington roofing lead-generation page.
+- [Contact](https://roofingcontractorslexingtonky.com/contact/): Phone-first contact and roofing request form.
+- [Roofing Blog](https://roofingcontractorslexingtonky.com/blog/): Practical homeowner roofing articles.
+- [Service Areas](https://roofingcontractorslexingtonky.com/service-areas/): Central Kentucky roofing service-area hub.
+
+## Roofing Services
+
+- [Roof Repair](https://roofingcontractorslexingtonky.com/roof-repair/): Missing shingles, flashing repairs, localized leaks, and repair-first roof guidance.
+- [Emergency Roof Repair](https://roofingcontractorslexingtonky.com/emergency-roof-repair/): Urgent leak triage and storm-related roofing calls.
+- [Roof Replacement](https://roofingcontractorslexingtonky.com/roof-replacement/): Replacement planning, shingles, ventilation, decking concerns, and estimates.
+- [Storm Damage Roof Repair](https://roofingcontractorslexingtonky.com/storm-damage-roof-repair/): Conservative wind, hail, flashing, ridge, valley, and gutter damage review.
+- [Roof Inspection](https://roofingcontractorslexingtonky.com/roof-inspection/): Visible roof condition checks and repair-priority guidance.
+- [Roof Leak Repair](https://roofingcontractorslexingtonky.com/roof-leak-repair/): Leak tracing for pipe boots, valleys, flashing, chimneys, vents, and gutters.
+
+## High-Intent Problem Pages
+
+- [Roof Leaking After Storm in Lexington KY](https://roofingcontractorslexingtonky.com/roof-leaking-after-storm-lexington-ky/)
+- [Missing Shingles in Lexington KY](https://roofingcontractorslexingtonky.com/missing-shingles-lexington-ky/)
+- [Hail Damaged Roof in Lexington KY](https://roofingcontractorslexingtonky.com/hail-damaged-roof-lexington-ky/)
+- [Roof Insurance Claim Help in Lexington KY](https://roofingcontractorslexingtonky.com/roof-insurance-claim-help-lexington-ky/)
+- [Emergency Roof Tarping in Lexington KY](https://roofingcontractorslexingtonky.com/emergency-roof-tarping-lexington-ky/)
+- [Water Stains on Ceiling in Lexington KY](https://roofingcontractorslexingtonky.com/water-stains-on-ceiling-lexington-ky/)
+- [Same-Day Roof Repair in Lexington KY](https://roofingcontractorslexingtonky.com/same-day-roof-repair-lexington-ky/)
+- [24-Hour Roofer in Lexington KY](https://roofingcontractorslexingtonky.com/24-hour-roofer-lexington-ky/)
+- [Free Roof Inspection in Lexington KY](https://roofingcontractorslexingtonky.com/free-roof-inspection-lexington-ky/)
+- [Roof Financing in Lexington KY](https://roofingcontractorslexingtonky.com/roof-financing-lexington-ky/)
+
+## Service Areas
+
+- [Nicholasville KY Roofing](https://roofingcontractorslexingtonky.com/service-areas/nicholasville-roofing/)
+- [Georgetown KY Roofing](https://roofingcontractorslexingtonky.com/service-areas/georgetown-roofing/)
+- [Richmond KY Roofing](https://roofingcontractorslexingtonky.com/service-areas/richmond-roofing/)
+- [Versailles KY Roofing](https://roofingcontractorslexingtonky.com/service-areas/versailles-roofing/)
+- [Winchester KY Roofing](https://roofingcontractorslexingtonky.com/service-areas/winchester-roofing/)
+
+## Articles
+
+- [What to Do When Your Roof Leaks After a Lexington Storm](https://roofingcontractorslexingtonky.com/blog/roof-leak-after-storm-lexington/)
+
+## Technical Resources
+
+- [XML Sitemap](https://roofingcontractorslexingtonky.com/sitemap-index.xml)
+- [Robots.txt](https://roofingcontractorslexingtonky.com/robots.txt)
+
+## Content Rules
+
+- Do not invent customer reviews, real job photos, license numbers, awards, staff names, or exact job histories.
+- Do not describe AI-generated images as real customer or job-site photos.
+- Do not promise insurance claim approval.
+- Prefer direct phone CTA wording for urgent roofing issues.
+- The primary market is Lexington, Kentucky, with nearby Central Kentucky service areas.
