@@ -1,5 +1,6 @@
 ---
 import { SITE, SERVICES, SERVICE_AREAS, areaUrl } from '../site.config';
+import { intentPages } from '../roofing-content';
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer">
@@ -43,6 +44,15 @@ const year = new Date().getFullYear();
           <li><a href="/contact">Contact / Estimate</a></li>
         </ul>
       </section>
+
+      <section class="fcol">
+        <h3>Urgent Problems</h3>
+        <ul>
+          {intentPages.slice(0, 6).map(page => (
+            <li><a href={`/${page.slug}`}>{page.title.replace(' in Lexington, KY', '')}</a></li>
+          ))}
+        </ul>
+      </section>
     </div>
 
     <div class="footer-bottom">
@@ -60,7 +70,7 @@ const year = new Date().getFullYear();
   .site-footer .muted { color: #93a49b; }
   .site-footer ul { list-style: none; padding: 0; margin: 0; }
   .site-footer li { padding: 0.18rem 0; }
-  .footer-grid { display: grid; gap: var(--space-5); grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+  .footer-grid { display: grid; gap: var(--space-5); grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr; }
   @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 500px) { .footer-grid { grid-template-columns: 1fr; } }
   .footer-bottom { margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid #203a30; text-align: center; font-size: 0.9rem; }

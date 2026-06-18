@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE, SERVICES, SERVICE_AREAS, areaUrl } from '../site.config';
+import { intentPages } from '../roofing-content';
 
 const faq = [
   { q: 'How fast should I call after a roof leak starts?', a: 'Call as soon as you see dripping, staining, damp insulation, or missing shingles. A small leak can move through decking and insulation before it shows clearly indoors.' },
@@ -80,6 +81,25 @@ const breadcrumbSchema = {
           <li><strong>Quote:</strong> You get next-step guidance before committing to repair or replacement.</li>
         </ol>
         <a href={SITE.phoneHref} class="btn btn-primary" data-cta="process">Call {SITE.phoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>High-Intent Roofing Problems in Lexington</h2>
+        <p>Problem pages capture the exact situations that usually lead to a call: storm leaks, missing shingles, hail concerns, ceiling stains, tarping, and fast repair needs.</p>
+      </div>
+      <div class="grid grid-3">
+        {intentPages.map(page => (
+          <article class="card image-card">
+            <img src={page.image} alt={page.alt} width="1536" height="1024" loading="lazy" />
+            <h3>{page.title}</h3>
+            <p>{page.short}</p>
+            <a class="more" href={`/${page.slug}`}>Get help</a>
+          </article>
+        ))}
       </div>
     </div>
   </section>

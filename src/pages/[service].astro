@@ -12,6 +12,10 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 const serviceName = service.title.replace(' in Lexington, KY', '').toLowerCase();
+const serviceUrl = `${SITE.url}/${service.slug}`;
+const pageDescription = service.title.includes('Lexington')
+  ? `${service.description} Call ${SITE.phoneDisplay} for roofing help.`
+  : `${service.title} in Lexington, KY. ${service.description} Call ${SITE.phoneDisplay} for roofing help.`;
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -28,14 +32,54 @@ const breadcrumb = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
-    { '@type': 'ListItem', position: 2, name: service.title, item: `${SITE.url}/${service.slug}` },
+    { '@type': 'ListItem', position: 2, name: service.title, item: serviceUrl },
   ],
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${serviceUrl}#service`,
+  name: service.title,
+  serviceType: service.schemaServiceType ?? service.title,
+  description: service.description,
+  url: serviceUrl,
+  image: `${SITE.url}${service.image}`,
+  provider: { '@id': `${SITE.url}#business` },
+  areaServed: [
+    { '@type': 'City', name: 'Lexington', containedInPlace: { '@type': 'State', name: 'Kentucky' } },
+    { '@type': 'AdministrativeArea', name: 'Central Kentucky' },
+  ],
+  audience: {
+    '@type': 'Audience',
+    audienceType: 'Homeowners needing roofing help',
+  },
+  potentialAction: {
+    '@type': 'ContactAction',
+    name: `Call about ${serviceName}`,
+    target: SITE.phoneHref,
+  },
+  mainEntityOfPage: serviceUrl,
+};
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `${serviceUrl}#next-steps`,
+  name: `What to do before calling for ${serviceName}`,
+  description: `Safe first steps before scheduling ${serviceName} in Lexington, KY.`,
+  step: (service.steps ?? []).map((step, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    name: `Step ${index + 1}`,
+    text: step,
+  })),
 };
 ---
 <BaseLayout
   title={`${service.title} | Lexington KY Roofing Contractors`}
-  description={`${service.title} in Lexington, KY. ${service.description} Call ${SITE.phoneDisplay} for roofing help.`}
-  schema={[faqSchema, breadcrumb]}
+  description={pageDescription}
+  schema={[serviceSchema, howToSchema, faqSchema, breadcrumb]}
   ogImage={service.image}
 >
   <nav class="breadcrumb container" aria-label="Breadcrumb">
@@ -86,6 +130,23 @@ const breadcrumb = {
         <article class="card"><h3>1. Problem review</h3><p>Tell us where you noticed the leak, stain, missing shingles, or storm concern.</p></article>
         <article class="card"><h3>2. Roof condition check</h3><p>The likely source is reviewed with attention to shingles, flashing, vents, valleys, and gutters.</p></article>
         <article class="card"><h3>3. Repair or replacement path</h3><p>You get a practical recommendation without unsupported claims, invented staff proof, or guaranteed insurance promises.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Related Roofing Help in Lexington</h2>
+        <p>These pages connect the main roofing service to the problem a homeowner is actually searching for.</p>
+      </div>
+      <div class="grid grid-3">
+        {service.relatedLinks.map(link => (
+          <article class="card">
+            <h3><a href={link.href}>{link.label}</a></h3>
+            <p>Review this related roofing topic if your issue involves leaks, storm damage, shingle wear, inspections, or repair planning.</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
