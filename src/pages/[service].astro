@@ -97,7 +97,7 @@ const howToSchema = {
           <a href="/contact" class="btn btn-secondary btn-large" data-cta="service-contact">Request Estimate</a>
         </div>
       </div>
-      <img src={service.image} alt={service.alt} width="1536" height="1024" loading="eager" />
+      <img src={service.image} alt={service.alt} width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" />
     </div>
   </section>
 

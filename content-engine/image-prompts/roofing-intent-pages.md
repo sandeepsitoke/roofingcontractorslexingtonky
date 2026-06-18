@@ -6,7 +6,7 @@ Generate these as realistic lifestyle roofing photos. Save final files under:
 
 Rules for all prompts: no readable text, no watermark, no real company logos, no branded trucks, no fake before/after proof, no identifiable faces close-up, no fake customer testimonial scene.
 
-## roof-leaking-after-storm-lexington-ky.png
+## roof-leaking-after-storm-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -20,7 +20,7 @@ Color palette: natural roof grays, brick, green lawn, muted navy and warm safety
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, realistic local-service photography, no company logo, no branded truck, no readable text, no watermark, no fake before-after, no dramatic disaster scene
 
-## missing-shingles-lexington-ky.png
+## missing-shingles-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -34,7 +34,7 @@ Color palette: charcoal shingles, brick, green lawn, white trim, subtle warm saf
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no logos, no branded truck, no readable text, no watermark, no fake before-after, no exaggerated damage
 
-## hail-damaged-roof-lexington-ky.png
+## hail-damaged-roof-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -48,7 +48,7 @@ Color palette: dark shingles, tan brick, green lawn, muted orange safety accent
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no logos, no branded truck, no readable text, no watermark, no fake before-after, no extreme damage
 
-## roof-insurance-claim-help-lexington-ky.png
+## roof-insurance-claim-help-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -62,7 +62,7 @@ Color palette: warm wood, charcoal shingle sample, white paper, green accent pla
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no readable text, no logos, no insurance company marks, no watermark, no fake approval stamp, no fake testimonial
 
-## emergency-roof-tarping-lexington-ky.png
+## emergency-roof-tarping-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -76,7 +76,7 @@ Color palette: charcoal roof, blue tarp, brick, green lawn, muted safety orange 
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no logos, no branded truck, no readable text, no watermark, no fake before-after, no dangerous ladder behavior
 
-## water-stains-on-ceiling-lexington-ky.png
+## water-stains-on-ceiling-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -90,7 +90,7 @@ Color palette: warm neutral interior, white ceiling, muted green and blue accent
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no logos, no readable text, no watermark, no mold horror, no exaggerated damage, no fake customer testimonial
 
-## same-day-roof-repair-lexington-ky.png
+## same-day-roof-repair-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -104,7 +104,7 @@ Color palette: charcoal shingles, brick red, green lawn, warm safety orange acce
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no company logo, no readable text, no watermark, no fake job proof, no dramatic damage
 
-## 24-hour-roofer-lexington-ky.png
+## 24-hour-roofer-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -118,7 +118,7 @@ Color palette: warm neutrals, muted blue rain tones, clean white ceiling, small 
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no readable phone screen text, no logos, no watermark, no exaggerated flood, no fake testimonial
 
-## free-roof-inspection-lexington-ky.png
+## free-roof-inspection-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page
@@ -132,7 +132,7 @@ Color palette: charcoal shingles, brick, green lawn, navy workwear, warm tan tri
 Text: none
 Constraints: high-resolution, anti-aliased, balanced composition, no logos, no branded truck, no readable screen text, no watermark, no fake inspection certificate
 
-## roof-financing-lexington-ky.png
+## roof-financing-lexington-ky.webp
 
 Use case: photorealistic-natural
 Asset type: website hero image for local roofing lead-gen page

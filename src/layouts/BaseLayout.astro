@@ -19,7 +19,7 @@ const {
   description,
   canonical,
   schema,
-  ogImage = '/images/roofing/lexington-roofing-home-hero.png',
+  ogImage = '/images/roofing/lexington-roofing-home-hero.webp',
   pageType = 'website',
 } = Astro.props;
 
@@ -62,6 +62,7 @@ const schemas = schema
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="preload" as="image" href={ogImage} type="image/webp" fetchpriority="high" />
 
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />

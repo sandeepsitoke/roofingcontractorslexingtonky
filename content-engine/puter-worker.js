@@ -21,7 +21,7 @@ Return only strict JSON with this shape:
     "service": "...",
     "location": "...",
     "targetKeyword": "...",
-    "heroImage": "/images/blog/<slug>/hero.png",
+    "heroImage": "/images/blog/<slug>/hero.webp",
     "heroAlt": "Clean local-service alt text with service, object, and location context only",
   },
   "excerpt": "...",
@@ -30,7 +30,7 @@ Return only strict JSON with this shape:
   "sections": [{ "heading": "...", "body": ["...", "..."] }],
   "faqs": [{ "q": "...", "a": "..." }],
   "internalLinks": ["/ac-repair", "/contact"],
-  "media": [{ "filename": "hero.png", "path": "/images/blog/<slug>/hero.png", "prompt": "...", "model": "...", "alt": "...", "placement": "hero", "generatedDate": "YYYY-MM-DD" }],
+  "media": [{ "filename": "hero.webp", "path": "/images/blog/<slug>/hero.webp", "prompt": "...", "model": "...", "alt": "...", "placement": "hero", "generatedDate": "YYYY-MM-DD" }],
   "safetyNotes": ["..."]
 }`,
     },
