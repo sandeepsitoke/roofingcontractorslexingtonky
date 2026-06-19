@@ -33,6 +33,7 @@ const baseSchema = {
   name: SITE.name,
   url: SITE.url,
   telephone: SITE.phoneRaw,
+  ...(SITE.address ? { address: SITE.address } : {}),
   image: `${SITE.url}${ogImage}`,
   priceRange: SITE.priceRange,
   openingHoursSpecification: {

@@ -2,7 +2,7 @@
 
 > Roofing Contractors Lexington KY is a local lead-generation website for homeowners seeking roof repair, roof leak help, storm damage roof repair, inspections, roof replacement guidance, and urgent roofing calls in Lexington and nearby Central Kentucky communities.
 
-This site is built as a static Astro website. It does not publish a verified street address, license number, staff roster, reviews, awards, or documented job-site photos unless supplied by the site owner. Use phone-first contact language and avoid implying insurance approval guarantees.
+This site provides phone-first roofing guidance for Lexington and nearby Central Kentucky homeowners. Roofing content should be practical, locally specific, and careful about safety, insurance, and repair-versus-replacement decisions.
 
 Primary phone: [(859) 809-8024](tel:+18598098024)
 
@@ -55,7 +55,7 @@ Primary phone: [(859) 809-8024](tel:+18598098024)
 ## Content Rules
 
 - Do not invent customer reviews, real job photos, license numbers, awards, staff names, or exact job histories.
-- Do not describe AI-generated images as real customer or job-site photos.
+- Do not describe illustrative images as real customer or job-site photos unless the source is verified.
 - Do not promise insurance claim approval.
 - Prefer direct phone CTA wording for urgent roofing issues.
 - The primary market is Lexington, Kentucky, with nearby Central Kentucky service areas.

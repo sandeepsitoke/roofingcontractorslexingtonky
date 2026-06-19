@@ -4,23 +4,46 @@ import { SITE } from '../site.config';
 import posts from '../content/blog-manifest.json';
 
 const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Roofing Resources', item: SITE.url + '/blog/' },
+  ],
+};
 ---
 <BaseLayout
-  title="Lexington Roofing Blog | Roof Repair & Storm Damage Tips"
-  description="Practical roofing advice for Lexington homeowners, including roof leaks, storm damage, inspections, replacement planning, and when to call."
+  title="Lexington Roofing Resources"
+  description="Practical roofing resources for Lexington homeowners dealing with leaks, storm damage, inspections, replacement planning, and repair timing."
+  schema={breadcrumb}
 >
   <nav class="breadcrumb container" aria-label="Breadcrumb">
     <a href="/">Home</a> <span aria-hidden="true">›</span> Blog
   </nav>
   <section class="hero">
     <div class="container hero-inner">
-      <span class="eyebrow">Lexington Roofing Blog</span>
-      <h1>Roof repair and storm-readiness advice for Lexington homeowners.</h1>
-      <p class="hero-sub">Practical guidance for leaks, storm damage, inspections, and replacement decisions without exaggerated claims.</p>
+      <span class="eyebrow">Lexington roofing resources</span>
+      <h1>Roof repair and storm-readiness guidance for Lexington homeowners.</h1>
+      <p class="hero-sub">Use these guides when you are trying to decide whether a roof leak, storm concern, missing shingle, or aging roof needs a call now or a planned inspection.</p>
+    </div>
+  </section>
+  <section class="section section--alt">
+    <div class="container split">
+      <img src="/images/roofing/lexington-roof-storm-season-blog.webp" alt="Homeowner checking a roof from the driveway before storm season in Lexington" width="1536" height="1024" loading="lazy" />
+      <div>
+        <h2>Start with the symptom you can see.</h2>
+        <p>A ceiling stain after rain, shingles in the yard, dented gutters, or damp attic insulation can point to different roof problems. The goal of these resources is to help you describe the issue clearly before you call, not to talk you into a full replacement when a focused repair may be enough.</p>
+        <p>Lexington roofs can be affected by wind-driven rain, humid summers, older flashing details, tree debris, and storm systems moving through Central Kentucky. When water is actively entering, call first and avoid ladders or wet roof surfaces.</p>
+      </div>
     </div>
   </section>
   <section class="section">
     <div class="container">
+      <div class="section-head">
+        <h2>Featured Guides</h2>
+        <p>Read the latest homeowner guide, then use the service links below when your roof issue needs a more direct next step.</p>
+      </div>
       <ul class="post-list">
         {sortedPosts.map(p => (
           <li class="post-card">
@@ -33,6 +56,50 @@ const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
           </li>
         ))}
       </ul>
+    </div>
+  </section>
+  <section class="section section--alt">
+    <div class="container">
+      <div class="grid grid-3">
+        <article class="card">
+          <h2>Roof Leak Help</h2>
+          <p>Use this when water is dripping, stains are spreading, or the attic feels damp after rain. Leak work starts with tracing the water path, not guessing from the stain location.</p>
+          <a class="more" href="/roof-leak-repair">Read about roof leak repair</a>
+        </article>
+        <article class="card">
+          <h2>Storm Damage Review</h2>
+          <p>Wind, hail, and debris can leave roof problems that are not obvious from the driveway. A storm review should document visible conditions without promising insurance outcomes.</p>
+          <a class="more" href="/storm-damage-roof-repair">Review storm damage roofing</a>
+        </article>
+        <article class="card">
+          <h2>Replacement Planning</h2>
+          <p>If the roof is aging, leaking in more than one place, or losing granules across large areas, a replacement conversation can separate urgent fixes from longer-term budget planning.</p>
+          <a class="more" href="/roof-replacement">Plan a roof replacement</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Seasonal Roofing Questions In Lexington</h2>
+        <p>Roof questions change with the weather. Spring and summer storms bring leak, hail, and missing-shingle calls. Fall is a better time to ask about gutter drainage, flashing, and roof age before colder weather. After any heavy rain, a small stain can be the first sign that water already moved through insulation or decking.</p>
+        <p>Use this section as a starting point when you are not sure which service page fits. A symptom like granules near a downspout, a stain below a bathroom vent, or a lifted ridge cap can point to different next steps.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>After wind or hail</h3>
+          <p>Check from the ground for shingles in the yard, dented gutters, ridge damage, and new stains. Photos help document what changed, but roof access should wait until conditions are safe.</p>
+        </article>
+        <article class="card">
+          <h3>Before replacement season</h3>
+          <p>Ask about decking, ventilation, shingle options, flashing, cleanup, and what could change the estimate. A careful replacement discussion should not skip the roof system details that affect lifespan.</p>
+        </article>
+        <article class="card">
+          <h3>When a repair may work</h3>
+          <p>A single pipe boot, valley detail, lifted shingle section, or flashing gap may be repairable when the surrounding roof is still serviceable. Repeated leaks or widespread granule loss need a broader conversation.</p>
+        </article>
+      </div>
     </div>
   </section>
   <section class="section section--alt">

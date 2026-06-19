@@ -52,11 +52,11 @@ const defaultSteps = [
 ];
 
 const coreRelatedLinks = [
-  { href: '/roof-repair', label: 'Roof Repair' },
-  { href: '/roof-leak-repair', label: 'Roof Leak Repair' },
-  { href: '/storm-damage-roof-repair', label: 'Storm Damage Roof Repair' },
-  { href: '/roof-inspection', label: 'Roof Inspection' },
-  { href: '/contact', label: 'Request Roofing Help' },
+  { href: '/roof-repair', label: 'Roof Repair', description: 'Use this page when the problem looks localized, such as a small shingle section, flashing detail, pipe boot, or roof edge issue.' },
+  { href: '/roof-leak-repair', label: 'Roof Leak Repair', description: 'Start here when stains, drips, attic dampness, or recurring rain leaks are the main reason you are calling.' },
+  { href: '/storm-damage-roof-repair', label: 'Storm Damage Roof Repair', description: 'Review this page after wind, hail, fallen limbs, or debris leave visible roof changes around a Lexington-area home.' },
+  { href: '/roof-inspection', label: 'Roof Inspection', description: 'Use an inspection when you need a condition check before repairs, a sale, insurance documentation, or replacement planning.' },
+  { href: '/contact', label: 'Request Roofing Help', description: 'Call or send the form when you need a next step for a specific leak, storm concern, shingle problem, or roof replacement question.' },
 ];
 
 export const intentPages = [
@@ -303,12 +303,139 @@ export const intentPages = [
 ];
 
 export const areaDetails = [
-  { slug: 'lexington', title: 'Roofing Contractors in Lexington, KY', intro: 'Lexington homes deal with humid summers, spring storms, wind-driven rain, and aging shingle roofs. Call for roof repair, inspections, storm damage review, leak tracing, or replacement guidance.', neighborhoods: ['Chevy Chase', 'Hamburg', 'Beaumont', 'Masterson Station', 'Tates Creek'] },
-  { slug: 'nicholasville', title: 'Roofing Contractors in Nicholasville, KY', intro: 'Nicholasville homeowners call for leak repairs, storm checks, shingle replacement options, and roof inspections across Jessamine County neighborhoods.', neighborhoods: ['Brannon Crossing', 'Downtown Nicholasville', 'Keene', 'Wilmore Road', 'Southbrook'] },
-  { slug: 'georgetown', title: 'Roofing Contractors in Georgetown, KY', intro: 'Georgetown roofs can take wind, hail, and drainage wear. Get practical help for storm damage, roof leaks, inspections, and replacement planning.', neighborhoods: ['Cherry Blossom', 'Downtown Georgetown', 'Paynes Depot', 'Elkhorn Green', 'Oxford'] },
-  { slug: 'richmond', title: 'Roofing Contractors in Richmond, KY', intro: 'Richmond homeowners can call for roof leak repair, missing shingles, storm damage checks, and replacement estimates throughout Madison County.', neighborhoods: ['Downtown Richmond', 'Boonesborough', 'Berea Road', 'Lake Reba', 'Eastern Bypass'] },
-  { slug: 'versailles', title: 'Roofing Contractors in Versailles, KY', intro: 'Versailles homes need careful shingle, flashing, and gutter checks after wind or heavy rain. Call for roof repairs, inspections, and replacement options.', neighborhoods: ['Downtown Versailles', 'Amsden', 'Mortonsville', 'Midway Road', 'Pisgah Pike'] },
-  { slug: 'winchester', title: 'Roofing Contractors in Winchester, KY', intro: 'Winchester homeowners can request help with roof leaks, shingle wear, storm damage review, and roof replacement planning in Clark County.', neighborhoods: ['Downtown Winchester', 'Colby Hills', 'Boonesboro Road', 'Strode Station', 'Indian Old Fields'] },
+  {
+    slug: 'lexington',
+    title: 'Roofing Contractors in Lexington, KY',
+    intro: 'Lexington roofs see a mix of older in-town homes, newer subdivision builds, tree cover, humid summers, and fast-moving spring storm systems. Homes around Chevy Chase, Kenwick, Hamburg, Beaumont, and Masterson Station can have very different roof details, from older decking and chimney flashing to newer valleys, vents, and ridge systems. Call when you need roof repair, leak tracing, storm damage review, inspection, or replacement guidance inside the primary Lexington service area.',
+    localAngle: 'Lexington roof work often starts with finding the actual water path. A ceiling stain near a chimney, valley, or bathroom vent may not line up with the roof opening, especially in older neighborhoods with additions or attic framing changes.',
+    proof: 'Calls commonly come from neighborhoods near Chevy Chase, Hamburg, Beaumont, Masterson Station, Tates Creek, and nearby Fayette County communities.',
+    costFactors: 'Repair and replacement pricing depends on roof size, pitch, access, shingle type, decking condition, flashing detail, ventilation, and whether storm damage needs documentation.',
+    permitNote: 'Permit rules can depend on the scope of work and the local authority. Confirm current requirements with Lexington-Fayette Urban County Government before structural changes or major replacement work.',
+    localNotes: [
+      'In older Lexington neighborhoods, roof repairs often need a closer look at chimney counterflashing, previous patch areas, and roof-to-wall transitions around additions.',
+      'In newer subdivisions, the first warning sign may be a lifted ridge cap, a pipe boot split, or wind-driven rain entering at a complex valley.',
+      'If the home has heavy tree cover, ask about gutter overflow and debris in valleys because drainage problems can look like a shingle leak from inside.',
+      'For Lexington callers, the most useful details are the nearest cross street or neighborhood, whether the roof has a chimney or skylight, and whether the stain appears during ordinary rain or only when wind pushes water against the roof.',
+    ],
+    faqs: [
+      { q: 'Do Lexington roof leaks need immediate attention?', a: 'Yes when water is entering, paint is bubbling, insulation is damp, or shingles are missing before more rain. A small roof opening can travel through decking and framing before it shows clearly inside.' },
+      { q: 'What Lexington roof problems are common after storms?', a: 'Lifted shingles, loose ridge caps, flashing movement, gutter overflow, branch impact, and leaks around valleys or pipe boots are common reasons homeowners call after wind and heavy rain.' },
+      { q: 'Can I get a repair instead of a full replacement?', a: 'Often, yes. Localized shingle, flashing, or pipe boot issues may be repairable. Replacement is more likely when age, brittleness, granule loss, or repeated leaks show the roof is failing across larger areas.' },
+    ],
+    neighborhoods: ['Chevy Chase', 'Hamburg', 'Beaumont', 'Masterson Station', 'Tates Creek'],
+  },
+  {
+    slug: 'nicholasville',
+    title: 'Roofing Contractors in Nicholasville, KY',
+    intro: 'Nicholasville roofing calls often come from a mix of established homes near downtown, fast-growing subdivision areas around Brannon Crossing, and rural-edge properties across Jessamine County. Wind-driven rain and open exposures can make lifted shingles, ridge cap wear, pipe boot leaks, and gutter drainage issues show up quickly. If you are near Wilmore Road, Southbrook, Keene, or the Brannon Crossing corridor, call for roof repair, inspections, storm checks, leak tracing, or replacement planning.',
+    localAngle: 'Nicholasville homes in newer subdivisions may have different concerns than older downtown homes. Newer roofs often need ventilation, valley, and installation-detail checks, while older roofs may need decking, flashing, and previous repair areas reviewed.',
+    proof: 'Service requests commonly reference Brannon Crossing, Downtown Nicholasville, Keene, Wilmore Road, Southbrook, and nearby Jessamine County roads.',
+    costFactors: 'Cost depends on slope, roof height, shingle match, access from the driveway or side yard, decking repairs, flashing condition, and whether the roof needs a small repair or a broader replacement quote.',
+    permitNote: 'Nicholasville and Jessamine County permit requirements can vary by address and scope. Confirm current rules before structural roof work or replacement.',
+    localNotes: [
+      'Near Brannon Crossing and other newer growth areas, roof concerns may involve installation details, ridge ventilation, and long roof planes exposed to crosswinds.',
+      'Around older Nicholasville homes, leak checks often include chimney metal, step flashing, aging pipe boots, and decking that may have been patched before.',
+      'For rural-edge properties, mention whether the roof is exposed to open wind, tree limbs, or gravel-drive access because those details can affect scheduling and repair setup.',
+      'Nicholasville callers should mention if the home is in a newer subdivision, near open pasture, or closer to the downtown grid because roof access, wind exposure, and previous repair history can change the inspection priorities.',
+      'Helpful clues include satellite dish brackets, bathroom exhaust exits, metal porch roofs, attached garage valleys, and any attic odor after a humid rain because those details narrow the repair search.',
+      'Photos of fascia staining, loose drip edge, bent apron metal, or displaced starter strips are especially useful.',
+    ],
+    faqs: [
+      { q: 'Do Nicholasville homes need different roof checks than Lexington homes?', a: 'Sometimes. Subdivision layout, open wind exposure, roof age, and drainage details can change what needs attention first, especially after spring storms.' },
+      { q: 'Can missing shingles in Nicholasville wait a few weeks?', a: 'It is better to call before the next heavy rain. Missing shingles can expose underlayment or fasteners, and wind can expand the damaged section.' },
+      { q: 'Should I ask about permits before replacing a roof?', a: 'Yes. Permit requirements depend on the location and scope. Confirm with the city or county before major roof work so the job is handled correctly.' },
+    ],
+    neighborhoods: ['Brannon Crossing', 'Downtown Nicholasville', 'Keene', 'Wilmore Road', 'Southbrook'],
+  },
+  {
+    slug: 'georgetown',
+    title: 'Roofing Contractors in Georgetown, KY',
+    intro: 'Georgetown roofing work often involves storm exposure, fast subdivision growth, and roof systems across both newer neighborhoods and older homes near the downtown core. Homeowners around Cherry Blossom, Paynes Depot, Elkhorn Green, Oxford, and Downtown Georgetown call about missing shingles, hail concerns, gutter drainage, roof leaks, and replacement timing. If wind or heavy rain has changed how the roof looks or how the attic smells, a focused inspection can separate small repairs from larger planning.',
+    localAngle: 'Georgetown roofs can see open-wind conditions in newer subdivisions and detail-heavy repair needs around older homes. Ridge caps, valleys, vents, gutters, and wall flashing deserve close attention after storm systems move through Scott County.',
+    proof: 'Common service references include Cherry Blossom, Downtown Georgetown, Paynes Depot, Elkhorn Green, Oxford, and nearby Scott County neighborhoods.',
+    costFactors: 'Pricing is shaped by roof size, story height, shingle availability, decking condition, access, valley and ridge detail, and whether documentation is needed after storm damage.',
+    permitNote: 'Georgetown building inspection resources cover additions, renovations, repairs, and related permit processes. Confirm current requirements before replacement or structural roof work.',
+    localNotes: [
+      'Cherry Blossom and other subdivision roofs can have broad slopes where wind-lifted tabs are hard to see until granules or shingles show up near downspouts.',
+      'Homes near Downtown Georgetown may need closer attention to older flashing details, roof layers, porch tie-ins, and previous repairs around chimneys or dormers.',
+      'After hail or strong wind, document gutters, vents, ridge caps, and interior stains before anything is moved or discarded so the roof condition can be reviewed clearly.',
+      'Georgetown callers can speed up the first conversation by sharing whether damage is on a front slope, back slope, garage roof, porch roof, or second-story section, since access and visibility affect what can be checked safely.',
+    ],
+    faqs: [
+      { q: 'What should Georgetown homeowners check after hail or wind?', a: 'From the ground, look for missing shingles, dented gutters, loose ridge caps, debris impact, and new stains inside. Avoid climbing on the roof to verify damage.' },
+      { q: 'Is a roof inspection useful before filing an insurance claim?', a: 'It can help document visible conditions and explain repair needs, but the insurance carrier decides coverage. No roofer should promise approval.' },
+      { q: 'Why do Georgetown roof leaks show up away from the actual damage?', a: 'Water can travel along decking, rafters, insulation, and wall lines before it stains a ceiling, so the visible drip is often not directly under the roof opening.' },
+    ],
+    neighborhoods: ['Cherry Blossom', 'Downtown Georgetown', 'Paynes Depot', 'Elkhorn Green', 'Oxford'],
+  },
+  {
+    slug: 'richmond',
+    title: 'Roofing Contractors in Richmond, KY',
+    intro: 'Richmond homeowners deal with roof wear across older neighborhoods near downtown, homes near Eastern Bypass, properties around Lake Reba, and rural-edge areas toward Boonesborough and Berea Road. Storm runoff, tree debris, wind-lifted shingles, and aging flashing can all lead to ceiling stains or attic dampness. Call for roof leak repair, missing shingle repair, inspection, storm damage review, or replacement estimates across Madison County.',
+    localAngle: 'Richmond roof checks often focus on how water moves after heavy rain. Valleys, gutters, fascia edges, pipe boots, and chimney flashing can all send water sideways before the leak appears inside.',
+    proof: 'Calls commonly involve Downtown Richmond, Boonesborough, Berea Road, Lake Reba, Eastern Bypass, and nearby Madison County residential areas.',
+    costFactors: 'Repair scope depends on access, pitch, the number of damaged roof details, shingle condition, decking softness, gutter drainage, and whether matching older shingles is possible.',
+    permitNote: 'For replacement or structural work in Richmond or Madison County, confirm permit expectations with the correct local office before work begins.',
+    localNotes: [
+      'Near Lake Reba and tree-lined areas, debris-filled gutters and valleys can push water sideways under roof edges during heavy rain.',
+      'Around older Richmond homes, roof leaks may involve flashing, aging roof layers, soft decking, or repairs that were made before the current shingles were installed.',
+      'If the home is near open road corridors or rural edges, mention wind exposure and any shingles found in the yard after storms move through Madison County.',
+      'Richmond callers should describe whether the stain is below an attic, vaulted ceiling, bathroom vent, chimney, or exterior wall because those clues point to very different roof details during a leak trace.',
+      'Also mention skylights, dormers, satellite mounts, low porch slopes, clogged splash blocks, or a musty upstairs closet because small clues often reveal where storm water entered.',
+      'Note stained rafters, wet cellulose, buckled soffit panels, or valley leaves when those clues are visible safely.',
+    ],
+    faqs: [
+      { q: 'What roof problems should Richmond homeowners not ignore?', a: 'Active leaks, new ceiling stains, missing shingles, exposed underlayment, loose flashing, and damp attic insulation should be checked before another rain cycle.' },
+      { q: 'Can tree debris create a roof leak?', a: 'Yes. Branch impact, clogged valleys, full gutters, and debris against flashing can slow drainage and force water into vulnerable roof details.' },
+      { q: 'How do I know whether repair or replacement makes sense?', a: 'The answer depends on roof age, damage spread, leak history, shingle condition, and decking. Localized issues may be repaired; widespread wear usually points toward replacement planning.' },
+    ],
+    neighborhoods: ['Downtown Richmond', 'Boonesborough', 'Berea Road', 'Lake Reba', 'Eastern Bypass'],
+  },
+  {
+    slug: 'versailles',
+    title: 'Roofing Contractors in Versailles, KY',
+    intro: 'Versailles roofing calls often involve homes near Downtown Versailles, Amsden, Midway Road, Mortonsville, and Pisgah Pike, where tree cover, open farmland exposure, and older roof details can all affect how damage appears. Heavy rain can expose flashing gaps and gutter drainage problems, while wind can lift shingles before a homeowner sees water inside. Call for roof repairs, inspections, storm damage review, leak tracing, or replacement planning in Woodford County.',
+    localAngle: 'Versailles homes may need careful review around chimneys, valleys, gutters, and additions. Rural-edge properties can see more wind exposure, while tree-lined lots can add debris and drainage issues.',
+    proof: 'Service-area copy covers Downtown Versailles, Amsden, Mortonsville, Midway Road, Pisgah Pike, and nearby Woodford County roads.',
+    costFactors: 'Cost factors include roof pitch, access around landscaping or fencing, chimney/flashing detail, decking condition, shingle type, ventilation, and whether the issue is repairable or replacement-level.',
+    permitNote: 'Before major replacement or structural roof changes, confirm the current requirement with the applicable Versailles or Woodford County office.',
+    localNotes: [
+      'Versailles properties with mature trees may need drainage checks at gutters, valleys, and low-slope transitions where leaves slow water during storms.',
+      'Homes along rural roads can see stronger wind exposure, so lifted tabs, loose ridge material, and edge damage should be described when you call.',
+      'Older homes near town may have chimney, porch, or addition tie-ins that require a more careful flashing review than a simple shingle patch.',
+      'Versailles callers should mention fencing, landscaping, steep drives, or limited side-yard access because those details can affect ladder placement, material movement, and whether a repair visit needs extra setup time.',
+      'Describe copper flashing, box gutters, horse-farm lanes, detached garages, slate-looking materials, or tall dormers if present, since unusual access and roof details change the plan.',
+    ],
+    faqs: [
+      { q: 'Why do Versailles roofs leak around chimneys and valleys?', a: 'Those areas collect water and depend on flashing, seal transitions, and drainage staying intact. Small movement can create a leak path during wind-driven rain.' },
+      { q: 'Is roof tarping a permanent fix?', a: 'No. Tarping is only temporary protection when water is entering and permanent repair cannot be completed immediately or safely.' },
+      { q: 'What should I tell the roofer when I call?', a: 'Share where you see the stain or drip, when it started, whether shingles are missing, and whether any trees, wind, or hail were involved.' },
+    ],
+    neighborhoods: ['Downtown Versailles', 'Amsden', 'Mortonsville', 'Midway Road', 'Pisgah Pike'],
+  },
+  {
+    slug: 'winchester',
+    title: 'Roofing Contractors in Winchester, KY',
+    intro: 'Winchester roof concerns often come from a mix of older homes near downtown, established areas around Colby Hills, and properties along Boonesboro Road, Strode Station, and Indian Old Fields. Clark County storms can leave lifted shingles, hail indicators, gutter damage, and leaks that show up days later as ceiling stains. Call when you need roof leak repair, shingle repair, storm damage review, inspection, or replacement planning.',
+    localAngle: 'Winchester homes with older roof layers or previous repairs may need a careful look at decking, flashing, and ventilation. Newer sections can still leak if valleys, vents, or pipe boots were stressed by wind or debris.',
+    proof: 'Common local references include Downtown Winchester, Colby Hills, Boonesboro Road, Strode Station, Indian Old Fields, and nearby Clark County neighborhoods.',
+    costFactors: 'Pricing depends on roof access, pitch, age, shingle match, decking condition, flashing complexity, ventilation corrections, and whether the work is an isolated repair or a replacement estimate.',
+    permitNote: 'Confirm permit and inspection requirements with the appropriate Winchester or Clark County office before replacement or structural roof work.',
+    localNotes: [
+      'Downtown Winchester homes may have older roof layers, chimneys, porch tie-ins, or previous patch areas that need more than a quick surface look.',
+      'Homes near Colby Hills, Strode Station, and Boonesboro Road can see wind-driven rain that exposes weak pipe boots, valleys, and ridge details.',
+      'If stains appeared days after a storm, share the room location and any attic moisture clues because water may have traveled before it reached the ceiling.',
+      'Winchester callers can help by noting whether the roof problem is near a dormer, chimney, plumbing vent, gutter corner, or ridge line because each detail suggests a different repair path.',
+      'Mention metal valleys, porch additions, satellite mounts, loose soffit, downspout washouts, or attic frost history if you know them; those details help separate ventilation issues from active leaks.',
+      'Photos of apron flashing, rake edges, exposed felt, or nail pops can also help prioritize the visit.',
+    ],
+    faqs: [
+      { q: 'How soon should I call after seeing a ceiling stain in Winchester?', a: 'Call as soon as practical, especially if the stain follows rain. Moisture may already be in insulation or decking before it becomes visible indoors.' },
+      { q: 'Do all hail marks mean roof replacement?', a: 'No. A roof check looks at the pattern, shingle condition, age, and water-entry risk. Some conditions call for repair; others need broader evaluation.' },
+      { q: 'What can I safely check from the ground?', a: 'Look for missing shingles, debris, loose gutters, dented metal, and new stains inside. Avoid ladders and wet roof surfaces.' },
+    ],
+    neighborhoods: ['Downtown Winchester', 'Colby Hills', 'Boonesboro Road', 'Strode Station', 'Indian Old Fields'],
+  },
 ];
 
 export const serviceDetails = [

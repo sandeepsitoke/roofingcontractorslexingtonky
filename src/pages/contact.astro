@@ -1,11 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE, SERVICE_AREAS } from '../site.config';
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: SITE.url + '/contact/' },
+  ],
+};
 ---
 <BaseLayout
   title="Contact Roofing Contractors Lexington KY"
   description="Call Roofing Contractors Lexington KY at (859) 809-8024 for roof repair, roof leaks, storm damage review, inspections, and replacement estimates."
   ogImage="/images/roofing/roofing-contact-call.webp"
+  schema={breadcrumb}
 >
   <nav class="breadcrumb container" aria-label="Breadcrumb">
     <a href="/">Home</a> <span aria-hidden="true">›</span> Contact
@@ -31,7 +41,14 @@ import { SITE, SERVICE_AREAS } from '../site.config';
         <p><strong>Phone:</strong><br /><a href={SITE.phoneHref} class="big-phone" data-cta="contact-phone">{SITE.phoneDisplay}</a></p>
         <p><strong>Online request:</strong><br />Use the form on this page if you cannot call right now.</p>
         <p><strong>Common calls:</strong> roof leaks, missing shingles, storm damage review, roof inspection, repair estimate, and replacement estimate.</p>
-        <p class="muted">No public street address is shown until a verified business address is supplied.</p>
+        <p class="muted">Phone-first scheduling for Lexington, Nicholasville, Georgetown, Richmond, Versailles, Winchester, and nearby Central Kentucky communities.</p>
+        <h3>What to mention when you call</h3>
+        <ul class="list-clean">
+          <li>Where you see the leak, stain, missing shingles, or roof wear.</li>
+          <li>Whether the issue started after wind, hail, heavy rain, or fallen debris.</li>
+          <li>The ZIP code or nearby neighborhood so routing is clear.</li>
+          <li>Whether water is actively entering the home right now.</li>
+        </ul>
       </article>
 
       <article class="card contact-form">
@@ -64,6 +81,41 @@ import { SITE, SERVICE_AREAS } from '../site.config';
     <div class="container">
       <div class="section-head"><h2>Areas We Cover</h2></div>
       <p class="center">{SERVICE_AREAS.map(area => `${area.name}, KY`).join(' · ')}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2>For active leaks</h2>
+        <p>Move valuables away from the drip, place a container under active water if safe, and take photos of visible stains or damaged shingles from the ground. Do not climb onto a wet roof or set a ladder during wind or rain.</p>
+      </article>
+      <article class="card">
+        <h2>For replacement questions</h2>
+        <p>Share the roof age if you know it, whether leaks have repeated, and any shingle, ventilation, or decking concerns you have seen. A clear replacement conversation should separate urgent repairs from longer-term planning.</p>
+      </article>
+    </div>
+  </section>
+  <section class="section section--alt">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2>Same-day and urgent calls</h2>
+        <p>For storm leaks, missing shingles over living space, loose flashing, or water entering near electrical fixtures, call instead of waiting on email. Scheduling depends on weather, daylight, roof pitch, material access, and whether temporary protection is safer than a permanent repair that day.</p>
+        <p>Useful details include the room where water appears, whether the attic is wet, whether shingles are visible in the yard, and whether a tree limb, hail, or heavy wind came through before the leak started.</p>
+      </article>
+      <article class="card">
+        <h2>Non-urgent estimate calls</h2>
+        <p>For inspection, repair planning, financing questions, or roof replacement timing, include the address area, approximate roof age, number of stories, and whether you have noticed granules in gutters, curling shingles, ventilation concerns, or recurring stains after rain.</p>
+        <p>If you have prior repair paperwork, shingle color information, inspection notes, or photos from the ground, keep them nearby. Those details help separate a targeted repair from a broader replacement conversation.</p>
+      </article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Before you submit the form</h2>
+        <p>Include any details that make the roof easier to understand from the first response: chimney location, skylights, dormers, attached garage valleys, porch additions, satellite mounts, attic odors, gutter overflow, downspout problems, tree impact, or photos taken safely from the driveway.</p>
+        <p>Also mention unusual access concerns such as locked gates, steep grades, narrow alleys, pets outside, detached garages, solar equipment, brittle shingles, or active interior dripping.</p>
+      </div>
     </div>
   </section>
 </BaseLayout>

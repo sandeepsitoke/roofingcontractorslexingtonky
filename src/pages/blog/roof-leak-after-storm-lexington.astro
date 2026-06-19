@@ -23,14 +23,24 @@ const faq = [
 const schema = [
   {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
+    '@type': ['Article', 'BlogPosting'],
     headline: frontmatter.title,
     description: frontmatter.description,
     datePublished: frontmatter.date,
+    dateModified: frontmatter.date,
     image: `${SITE.url}${frontmatter.heroImage}`,
     author: { '@type': 'Organization', name: SITE.name },
     publisher: { '@type': 'Organization', name: SITE.name },
     mainEntityOfPage: `${SITE.url}/blog/${frontmatter.slug}/`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Roofing Resources', item: SITE.url + '/blog/' },
+      { '@type': 'ListItem', position: 3, name: frontmatter.title, item: `${SITE.url}/blog/${frontmatter.slug}/` },
+    ],
   },
   {
     '@context': 'https://schema.org',
@@ -67,6 +77,10 @@ const schema = [
         <li>Gutter overflow pushing water behind fascia</li>
       </ul>
 
+      <h2>Why Lexington storm leaks can be hard to trace</h2>
+      <p>Many Lexington homes have roof details that move water sideways before it appears indoors. Older homes may have chimney flashing, porch tie-ins, or previous repair areas. Newer subdivision roofs may have long valleys, ridge vents, pipe boots, and wall transitions that only leak during wind-driven rain.</p>
+      <p>That is why the stain on the ceiling is a clue, not a final diagnosis. Water can run along rafters, decking, insulation, or drywall seams before it drops into the room. When you call, describe the room, the nearest wall, the timing of the rain, and whether the stain grows during every storm or only during heavy wind.</p>
+
       <div class="callout-cta">
         <h2>Need roof leak help in Lexington?</h2>
         <p>Call now and describe what you are seeing. You can also review our <a href="/roof-leak-repair">roof leak repair</a>, <a href="/storm-damage-roof-repair">storm damage roof repair</a>, and <a href="/roof-inspection">roof inspection</a> pages.</p>
@@ -75,6 +89,11 @@ const schema = [
 
       <h2>Repair or replacement?</h2>
       <p>A single damaged pipe boot, flashing detail, or shingle section may be repairable. Replacement becomes more likely when shingles are brittle, granule loss is widespread, leaks repeat in multiple areas, or the roof is near the end of its service life.</p>
+
+      <h2>What to have ready before the roofing visit</h2>
+      <p>If it is safe, gather photos of the stain, attic moisture, missing shingles visible from the ground, gutter damage, or debris near the roof edge. Write down when the leak started and whether water was actively dripping or only staining. Keep any shingles that landed in the yard, but do not climb up to retrieve material from the roof.</p>
+      <p>For insurance-related storm concerns, keep the conversation factual. A roofing visit can document visible conditions and explain repair options, but claim decisions belong to the insurance carrier. Avoid any contractor who promises approval before an adjuster has reviewed the claim.</p>
+      <p>If the leak stopped when the rain stopped, still mention it. Intermittent leaks often point to wind direction, flashing movement, gutter backup, or a roof detail that only fails during heavier storms.</p>
 
       <h2>FAQ</h2>
       {faq.map(item => (

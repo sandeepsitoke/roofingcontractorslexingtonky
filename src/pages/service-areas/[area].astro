@@ -16,20 +16,31 @@ export function getStaticPaths() {
 }
 
 const { area, meta } = Astro.props;
+const pageUrl = `${SITE.url}/service-areas/${area.slug}-roofing`;
 const breadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
     { '@type': 'ListItem', position: 2, name: 'Service Areas', item: SITE.url + '/service-areas/' },
-    { '@type': 'ListItem', position: 3, name: area.title, item: `${SITE.url}/service-areas/${area.slug}-roofing` },
+    { '@type': 'ListItem', position: 3, name: area.title, item: pageUrl },
   ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: area.faqs.map(f => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 ---
 <BaseLayout
   title={area.title}
-  description={`${area.title}. Roof repair, storm damage review, inspections, roof leaks, and replacement estimates. Call ${SITE.phoneDisplay}.`}
-  schema={breadcrumb}
+  description={`Call ${SITE.phoneDisplay} for roofing help in ${meta.name}, KY: roof repair, leaks, storm damage review, inspections, and replacement planning.`}
+  schema={[breadcrumb, faqSchema]}
   ogImage="/images/roofing/lexington-roofing-service-area.webp"
 >
   <nav class="breadcrumb container" aria-label="Breadcrumb">
@@ -41,6 +52,11 @@ const breadcrumb = {
         <span class="eyebrow">{meta.name}, KY {meta.zip}</span>
         <h1>{area.title}</h1>
         <p class="hero-sub">{area.intro}</p>
+        <div class="hero-badges">
+          <span class="badge badge--light">{meta.driveFromBase}</span>
+          <span class="badge badge--light">ZIP {meta.zip}</span>
+          <span class="badge badge--light">{meta.name} roof calls</span>
+        </div>
         <div class="hero-cta">
           <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="area-hero">Call {SITE.phoneDisplay}</a>
           <a href="/contact" class="btn btn-secondary btn-large">Request Roofing Help</a>
@@ -54,7 +70,7 @@ const breadcrumb = {
       <article class="card">
         <h2>Roofing Services in {meta.name}</h2>
         <ul class="list-clean">
-          {SERVICES.map(service => <li><a href={`/${service.slug}`}>{service.title}</a></li>)}
+          {SERVICES.map(service => <li><a href={`/${service.slug}`}>{service.title} for {meta.name} homes</a></li>)}
         </ul>
       </article>
       <article class="card">
@@ -66,10 +82,47 @@ const breadcrumb = {
       </article>
     </div>
   </section>
+  <section class="section section--alt">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2>Why {meta.name} Roofs Need A Local Check</h2>
+        <p>{area.localAngle}</p>
+        <p>{area.proof}</p>
+      </article>
+      <article class="card">
+        <h2>Cost And Permit Questions</h2>
+        <p>{area.costFactors}</p>
+        <p>{area.permitNote}</p>
+      </article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>What To Watch For Around {meta.name}</h2></div>
+      <div class="grid grid-3">
+        {area.localNotes.map(note => (
+          <article class="card">
+            <p>{note}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><h2>{meta.name} Roofing FAQ</h2></div>
+      {area.faqs.map(f => (
+        <details class="faq">
+          <summary>{f.q}</summary>
+          <div class="faq-body">{f.a}</div>
+        </details>
+      ))}
+    </div>
+  </section>
   <section class="final-cta">
     <div class="container">
       <h2>Need roofing help in {meta.name}?</h2>
-      <p>Call for leaks, storm concerns, inspections, repairs, or replacement estimates.</p>
+      <p>{area.localNotes[0]} For {area.neighborhoods[2]}, mention driveway photos. For {area.neighborhoods[3]}, note interior stains. For {area.neighborhoods[4]}, include attic clues and storm timing.</p>
       <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="area-final">Call {SITE.phoneDisplay}</a>
     </div>
   </section>

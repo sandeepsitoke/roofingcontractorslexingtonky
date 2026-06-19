@@ -16,6 +16,32 @@ const serviceUrl = `${SITE.url}/${service.slug}`;
 const pageDescription = service.title.includes('Lexington')
   ? `${service.description} Call ${SITE.phoneDisplay} for roofing help.`
   : `${service.title} in Lexington, KY. ${service.description} Call ${SITE.phoneDisplay} for roofing help.`;
+const whenToCallLead = service.bullets?.length
+  ? `Call when ${service.bullets[0].toLowerCase()} matches what you are seeing. Also mention ${service.bullets.slice(1, 3).map(item => item.toLowerCase()).join(' or ')} so the first conversation starts with the right roof details.`
+  : `Call when ${serviceName} is the closest match for the roof problem you are trying to solve.`;
+const whenToCallSafety = `Do not climb for ${serviceName}; use ground photos and indoor clues instead. Focus on ${service.bullets?.slice(-2).map(item => item.toLowerCase()).join(' and ') ?? 'the safest visible details'} before the call.`;
+const visitIntro = service.bullets?.length
+  ? `For ${serviceName}, the visit starts with ${service.bullets[0].toLowerCase()} and then checks the roof details most likely to create that problem.`
+  : `The visit starts with the roof symptom and then checks the details most likely to create it.`;
+const visitSteps = [
+  {
+    title: `Share ${service.bullets?.[0] ?? service.schemaServiceType ?? service.title}`,
+    body: `Add timing, room location, recent weather, and safe photos if those details clarify ${serviceName}.`,
+  },
+  {
+    title: `Check ${service.bullets?.[1] ?? 'roof details'}`,
+    body: `${service.bullets?.slice(2, 5).join('. ') ?? 'Visible wear. Flashing. Drainage.'}. These clues shape the roof review.`,
+  },
+  {
+    title: `Plan around ${service.schemaServiceType ?? service.title}`,
+    body: `Repair path: ${service.bullets?.[0] ?? service.title}. Protection path: ${service.bullets?.[1] ?? serviceName}. Planning path: ${service.bullets?.[2] ?? 'roof condition'}.`,
+  },
+];
+const localDetailCopy = `For ${serviceName}: ${service.bullets?.[0] ?? 'visible roof symptoms'}. Lexington clue: ${service.bullets?.[1] ?? 'flashing and drainage'}. Roof detail: ${service.bullets?.[2] ?? 'vents and valleys'}. Ask about ${service.bullets?.[3] ?? 'roof age and access'}.`;
+const localNeighborhoodCopy = `Neighborhood context for ${service.bullets?.[0]?.toLowerCase() ?? serviceName}: Chevy Chase, Kenwick, Hamburg, Beaumont, Masterson Station, and Tates Creek can differ by roof age, tree cover, access, and drainage pattern.`;
+const costCopy = `Cost clue for ${service.bullets?.[0]?.toLowerCase() ?? serviceName}: height, pitch, and access. Cost clue for ${service.bullets?.[1]?.toLowerCase() ?? serviceName}: shingle match, decking, flashing, and ventilation.`;
+const trustCopy = `For ${service.bullets?.[0]?.toLowerCase() ?? serviceName}, confirm insurance. For ${service.bullets?.[1]?.toLowerCase() ?? serviceName}, confirm permit expectations when scope requires it and get the written repair or replacement scope.`;
+const serviceDetailCopy = `${service.title} calls should include plain details such as ${service.bullets?.map(item => item.toLowerCase()).join(', ') ?? serviceName}. Clear symptom language helps separate repairable roof details from broader roof planning.`;
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -77,7 +103,7 @@ const howToSchema = {
 };
 ---
 <BaseLayout
-  title={`${service.title} | Lexington KY Roofing Contractors`}
+  title={service.title}
   description={pageDescription}
   schema={[serviceSchema, howToSchema, faqSchema, breadcrumb]}
   ogImage={service.image}
@@ -92,6 +118,11 @@ const howToSchema = {
         <span class="eyebrow">{service.eyebrow}</span>
         <h1>{service.title}</h1>
         <p class="hero-sub">{service.description}</p>
+        <div class="hero-badges">
+          <span class="badge badge--light">{service.schemaServiceType ?? service.title}</span>
+          <span class="badge badge--light">Lexington roof detail review</span>
+          <span class="badge badge--light">Practical next-step guidance</span>
+        </div>
         <div class="hero-cta">
           <a href={SITE.phoneHref} class="btn btn-primary btn-large" data-cta="service-hero">Call {SITE.phoneDisplay}</a>
           <a href="/contact" class="btn btn-secondary btn-large" data-cta="service-contact">Request Estimate</a>
@@ -112,8 +143,8 @@ const howToSchema = {
         </article>
         <article class="card">
           <h2>When to Call</h2>
-          <p>Call when you see water stains, lifted shingles, missing shingles, flashing gaps, granules in gutters, or roof concerns after heavy wind or rain.</p>
-          <p>Stay off the roof if conditions are wet, windy, steep, or uncertain. A phone call is safer than a ladder check.</p>
+          <p>{whenToCallLead}</p>
+          <p>{whenToCallSafety}</p>
           <a href={SITE.phoneHref} class="btn btn-primary" data-cta="when-call">Call {SITE.phoneDisplay}</a>
         </article>
       </div>
@@ -124,13 +155,29 @@ const howToSchema = {
     <div class="container">
       <div class="section-head">
         <h2>What Happens During the Visit</h2>
-        <p>Every roofing page follows the same lead-focused flow: understand the problem, inspect the likely source, explain options, and give a next step.</p>
+        <p>{visitIntro}</p>
       </div>
       <div class="grid grid-3">
-        <article class="card"><h3>1. Problem review</h3><p>Tell us where you noticed the leak, stain, missing shingles, or storm concern.</p></article>
-        <article class="card"><h3>2. Roof condition check</h3><p>The likely source is reviewed with attention to shingles, flashing, vents, valleys, and gutters.</p></article>
-        <article class="card"><h3>3. Repair or replacement path</h3><p>You get a practical recommendation without unsupported claims, invented staff proof, or guaranteed insurance promises.</p></article>
+        {visitSteps.map((step, index) => (
+          <article class="card"><h3>{index + 1}. {step.title}</h3><p>{step.body}</p></article>
+        ))}
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <article class="card">
+        <h2>Local Roof Details That Matter</h2>
+        <p>{localDetailCopy}</p>
+        <p>{localNeighborhoodCopy}</p>
+      </article>
+      <article class="card">
+        <h2>What Affects Cost</h2>
+        <p>{costCopy}</p>
+        <p>{trustCopy}</p>
+        <p>{serviceDetailCopy}</p>
+      </article>
     </div>
   </section>
 
@@ -144,7 +191,7 @@ const howToSchema = {
         {service.relatedLinks.map(link => (
           <article class="card">
             <h3><a href={link.href}>{link.label}</a></h3>
-            <p>Review this related roofing topic if your issue involves leaks, storm damage, shingle wear, inspections, or repair planning.</p>
+            <p>{link.description ?? `Use this page when ${link.label.toLowerCase()} is closer to the problem you are trying to solve today.`}</p>
           </article>
         ))}
       </div>

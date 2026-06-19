@@ -1,10 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE, SERVICE_AREAS, areaUrl } from '../../site.config';
+import { areaDetails } from '../../roofing-content';
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: SITE.url + '/service-areas/' },
+  ],
+};
 ---
 <BaseLayout
   title="Roofing Service Areas Near Lexington KY"
   description="Roofing Contractors Lexington KY serves Lexington, Nicholasville, Georgetown, Richmond, Versailles, Winchester, and nearby Central Kentucky communities."
+  schema={breadcrumb}
 >
   <section class="hero service-hero">
     <div class="container hero-grid">
@@ -20,16 +31,39 @@ import { SITE, SERVICE_AREAS, areaUrl } from '../../site.config';
       <img src="/images/roofing/lexington-roofing-service-area.webp" alt="Central Kentucky neighborhood with roofing materials near a home" width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" />
     </div>
   </section>
+  <section class="section section--alt">
+    <div class="container split">
+      <img src="/images/roofing/roofing-inspection-detail.webp" alt="Roofing inspection detail on asphalt shingles" width="1536" height="1024" loading="lazy" />
+      <div>
+        <span class="eyebrow">How we route local roofing calls</span>
+        <h2>Start with the roof problem, then match the right service area.</h2>
+        <p>Central Kentucky roof calls often come from the same weather event, but the roof details can be different by neighborhood. A newer Nicholasville subdivision, an older Winchester home, and a tree-lined Versailles property can all show storm damage in different ways.</p>
+        <p>Use the city pages below to confirm nearby coverage, then call with what you are seeing: missing shingles, ceiling stains, gutter overflow, hail indicators, or a roof that may be near replacement age.</p>
+      </div>
+    </div>
+  </section>
   <section class="section">
     <div class="container">
       <div class="grid grid-3">
-        {SERVICE_AREAS.map(area => (
+        {SERVICE_AREAS.map(area => {
+          const detail = areaDetails.find(item => item.slug === area.slug);
+          return (
           <article class="card">
             <h2>{area.name}, KY</h2>
-            <p>Roofing help for {area.name} homeowners, including leaks, shingle repairs, storm damage checks, inspections, and replacement planning.</p>
+            <p>{detail?.intro ?? `Roofing help for ${area.name} homeowners, including leaks, shingle repairs, storm damage checks, inspections, and replacement planning.`}</p>
+            <p class="muted">{area.driveFromBase}.</p>
             <a class="more" href={areaUrl(area.slug)}>View {area.name} roofing page</a>
           </article>
-        ))}
+          );
+        })}
+      </div>
+    </div>
+  </section>
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>When To Call From Any Service Area</h2>
+        <p>Call before the next heavy rain when you see water stains, missing shingles, loose flashing, exposed underlayment, dented gutters, or debris impact. Stay off wet or steep roof surfaces and describe what you can see from the ground.</p>
       </div>
     </div>
   </section>
