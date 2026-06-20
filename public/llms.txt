@@ -49,7 +49,7 @@ Primary phone: [(859) 809-8024](tel:+18598098024)
 
 ## Technical Resources
 
-- [XML Sitemap](https://roofingcontractorslexingtonky.com/sitemap-index.xml)
+- [XML Sitemap](https://roofingcontractorslexingtonky.com/sitemap-0.xml)
 - [Robots.txt](https://roofingcontractorslexingtonky.com/robots.txt)
 
 ## Content Rules
