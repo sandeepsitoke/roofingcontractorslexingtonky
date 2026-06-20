@@ -31,7 +31,7 @@ const schema = [
     image: `${SITE.url}${frontmatter.heroImage}`,
     author: { '@type': 'Organization', name: SITE.name },
     publisher: { '@type': 'Organization', name: SITE.name },
-    mainEntityOfPage: `${SITE.url}/blog/${frontmatter.slug}/`,
+    mainEntityOfPage: `${SITE.url}/blog/${frontmatter.slug}`,
   },
   {
     '@context': 'https://schema.org',
@@ -39,7 +39,7 @@ const schema = [
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
       { '@type': 'ListItem', position: 2, name: 'Roofing Resources', item: SITE.url + '/blog' },
-      { '@type': 'ListItem', position: 3, name: frontmatter.title, item: `${SITE.url}/blog/${frontmatter.slug}/` },
+      { '@type': 'ListItem', position: 3, name: frontmatter.title, item: `${SITE.url}/blog/${frontmatter.slug}` },
     ],
   },
   {

@@ -1,0 +1,138 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE } from '../../site.config';
+
+const frontmatter = {
+  title: 'New Roof Cost | Roofing Contractors Lexington KY',
+  h1: 'How Much Does Roof Replacement Cost in Lexington, KY?',
+  description: 'Lexington guide to roof replacement cost factors, asphalt shingles, permits, decking, ventilation, and when repair may still make sense.',
+  date: '2026-06-20',
+  readTime: '8 min read',
+  service: 'Roof Replacement',
+  location: 'Lexington, KY',
+  slug: 'roof-replacement-cost-lexington-ky',
+  heroImage: '/images/roofing/roof-replacement-lexington.webp',
+  heroAlt: 'Roof replacement materials and shingles on a Lexington home',
+};
+
+const faq = [
+  { q: 'What is the biggest factor in roof replacement cost?', a: 'Roof size is usually the starting point, but pitch, roof height, tear-off layers, decking condition, ventilation, flashing details, and material choice can change the final number.' },
+  { q: 'Is asphalt shingle replacement usually the budget option?', a: 'Yes. Asphalt shingles are commonly the most practical residential option in Kentucky because they balance cost, appearance, and weather performance for many homes.' },
+  { q: 'Can I repair the roof instead of replacing it?', a: 'Sometimes. Localized shingle, flashing, pipe boot, or valley problems may be repairable when the surrounding roof is still serviceable. Repeated leaks, brittle shingles, and widespread granule loss point toward replacement planning.' },
+  { q: 'Should I ask about permits before replacing a roof in Lexington?', a: 'Yes. Lexington-Fayette Urban County Government maintains building permit resources, and requirements can depend on the scope of work. Confirm current rules before a major replacement.' },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': ['Article', 'BlogPosting'],
+    headline: frontmatter.h1,
+    description: frontmatter.description,
+    datePublished: frontmatter.date,
+    dateModified: frontmatter.date,
+    image: `${SITE.url}${frontmatter.heroImage}`,
+    author: { '@type': 'Organization', name: SITE.name },
+    publisher: { '@type': 'Organization', name: SITE.name },
+    mainEntityOfPage: `${SITE.url}/blog/${frontmatter.slug}`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Roofing Resources', item: SITE.url + '/blog' },
+      { '@type': 'ListItem', position: 3, name: frontmatter.h1, item: `${SITE.url}/blog/${frontmatter.slug}` },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(item => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })),
+  },
+];
+---
+<BaseLayout title={frontmatter.title} description={frontmatter.description} schema={schema} ogImage={frontmatter.heroImage} pageType="article">
+  <article class="article">
+    <div class="container narrow">
+      <header class="article-head">
+        <p class="meta">{frontmatter.location} Â· {frontmatter.service} Â· {frontmatter.readTime}</p>
+        <h1>{frontmatter.h1}</h1>
+        <p>{frontmatter.description}</p>
+        <p><a href={SITE.phoneHref} class="btn btn-primary" data-cta="blog-cost-top">Call {SITE.phoneDisplay}</a></p>
+      </header>
+      <figure class="article-hero-image">
+        <img src={frontmatter.heroImage} alt={frontmatter.heroAlt} width="1536" height="1024" loading="eager" fetchpriority="high" decoding="async" />
+        <figcaption>Use a roof replacement estimate to compare scope, not just the final price.</figcaption>
+      </figure>
+
+      <p>Most Lexington homeowners start asking about roof replacement cost after one of three things happens: a leak returns after a repair, shingles start showing age across the whole roof, or a storm exposes damage that was not obvious from the driveway. The right answer is not a single online number. It is a clear scope that explains roof size, materials, tear-off, decking, ventilation, flashing, cleanup, and what could change once the old shingles come off.</p>
+
+      <h2>Target keyword and intent</h2>
+      <p>This guide is written for homeowners searching <strong>roof replacement cost Lexington KY</strong>, <strong>new roof cost Lexington KY</strong>, and <strong>asphalt shingle roof replacement Kentucky</strong>. The intent is cost planning before calling for an estimate, especially when the homeowner is deciding between repair, replacement, financing, or an insurance-related storm review.</p>
+
+      <h2>What Lexington roof replacement cost depends on</h2>
+      <p>A replacement estimate should be easy to compare line by line. If one bid is much lower than another, the difference is often in the scope. Ask whether the quote includes tear-off, disposal, flashing, pipe boots, ridge ventilation, drip edge, cleanup, permit handling when required, and how decking repairs are priced if soft or rotted wood is found.</p>
+      <ul>
+        <li><strong>Roof size:</strong> Roofers measure in squares, where one square equals 100 square feet of roof surface.</li>
+        <li><strong>Pitch and height:</strong> A steep two-story roof takes more setup and safety time than a simple low-slope ranch roof.</li>
+        <li><strong>Roof shape:</strong> Valleys, dormers, chimneys, skylights, low porch tie-ins, and wall transitions add labor and flashing detail.</li>
+        <li><strong>Tear-off layers:</strong> Removing old roofing lets the crew inspect decking, but multiple layers add disposal and labor.</li>
+        <li><strong>Decking condition:</strong> Soft sheathing, old repairs, or moisture damage can change the final scope after tear-off.</li>
+        <li><strong>Ventilation:</strong> Intake and exhaust problems can shorten shingle life, so replacement is the time to ask about airflow.</li>
+        <li><strong>Material choice:</strong> Basic asphalt, architectural asphalt, metal, synthetic, and specialty materials have different cost and lifespan tradeoffs.</li>
+      </ul>
+
+      <h2>Why online roof prices vary so much</h2>
+      <p>Published cost ranges for Kentucky and national roof replacement guides are useful for budgeting, but they cannot see your roof. A home near Chevy Chase with older decking, chimney flashing, and porch tie-ins is a different job from a newer Hamburg or Masterson Station home with long valleys and ridge ventilation. Both may be asphalt shingle replacements, but the details can change labor, material waste, access, and risk.</p>
+      <p>That is why a good estimate should explain what is included instead of relying on a vague per-square-foot number. If the roof has an active leak, ask whether the leak area needs temporary repair first or whether the replacement timeline is soon enough to solve the problem safely.</p>
+
+      <div class="callout-cta">
+        <h2>Planning a roof replacement in Lexington?</h2>
+        <p>Call and describe the roof age, leak history, shingle condition, and whether storm damage is involved. You can also review our <a href="/roof-replacement">roof replacement</a>, <a href="/roof-inspection">roof inspection</a>, and <a href="/roof-financing-lexington-ky">roof financing</a> pages before requesting a quote.</p>
+        <a href={SITE.phoneHref} class="btn btn-primary" data-cta="blog-cost-mid">Call {SITE.phoneDisplay}</a>
+      </div>
+
+      <h2>Repair, replace, or inspect first?</h2>
+      <p>Not every old-looking roof needs immediate replacement. A missing shingle section, a cracked pipe boot, or a small flashing gap may be repairable if the surrounding shingles still seal properly. Replacement becomes more practical when shingles are brittle, curling, losing granules across broad areas, leaking in more than one place, or close to the end of their useful life.</p>
+      <p>If you are unsure, start with a roof inspection. A repair-first inspection should identify whether the problem is localized or part of a larger pattern. It should also explain what may happen if you wait through another spring storm season or another freeze-thaw cycle.</p>
+
+      <h2>Questions to ask before choosing a roof estimate</h2>
+      <ol>
+        <li>Does the estimate include full tear-off and disposal?</li>
+        <li>How are damaged decking sections priced if they are found?</li>
+        <li>What shingle line, underlayment, starter, ridge cap, and ventilation products are included?</li>
+        <li>Are pipe boots, drip edge, flashing details, and cleanup included?</li>
+        <li>Who handles permits or local requirements if the project scope requires them?</li>
+        <li>What happens if weather delays the job after tear-off starts?</li>
+        <li>How will landscaping, gutters, driveways, and attic areas be protected?</li>
+      </ol>
+
+      <h2>Lexington permit and contractor trust notes</h2>
+      <p>Lexington-Fayette Urban County Government publishes building permit resources for residential and commercial construction. Permit needs can depend on the project scope, so confirm current requirements before a full replacement or structural roof work begins.</p>
+      <p>Kentucky roofing licensing can also confuse homeowners. The Kentucky Roofing Contractors Association notes that Kentucky does not have a state roofing licensing apparatus like some states, and its contractor certification is a nongovernmental program. That makes basic trust checks more important: ask about insurance, workers compensation where applicable, references, written scope, warranty terms, and how storm-related documentation is handled.</p>
+
+      <h2>When storm damage changes the conversation</h2>
+      <p>Wind and hail can push a roof replacement conversation forward, but the process should stay factual. A roofing visit can document missing shingles, dented soft metal, bruised shingles, granule loss, damaged ridge caps, or interior staining. It should not promise insurance approval. Claim decisions belong to the insurance carrier.</p>
+      <p>If water is entering now, focus first on reducing further damage. Move valuables, photograph visible water stains, and call for roofing help. Avoid climbing on the roof after storms, especially when shingles are wet or wind damage is visible.</p>
+
+      <h2>Source notes used for this guide</h2>
+      <p>This guide uses public cost and local context from Kentucky roofing cost resources, Lexington-Fayette Urban County Government building permit resources, Kentucky Roofing Contractors Association certification guidance, and recent Central Kentucky storm reporting. Use those as planning references, then get a roof-specific estimate before making a decision.</p>
+
+      <h2>FAQ</h2>
+      {faq.map(item => (
+        <details class="faq">
+          <summary>{item.q}</summary>
+          <div class="faq-body">{item.a}</div>
+        </details>
+      ))}
+
+      <h2>Related Lexington roofing pages</h2>
+      <ul>
+        <li><a href="/roof-replacement">Roof Replacement in Lexington</a> explains the replacement process, shingle options, ventilation review, and quote expectations.</li>
+        <li><a href="/roof-inspection">Roof Inspection in Lexington</a> is the better first step when you are not sure whether repair or replacement makes sense.</li>
+        <li><a href="/storm-damage-roof-repair">Storm Damage Roof Repair</a> helps after wind, hail, or debris leaves new roof concerns.</li>
+        <li><a href="/contact">Request roofing help</a> when you are ready to describe the roof and schedule the next step.</li>
+      </ul>
+    </div>
+  </article>
+</BaseLayout>
