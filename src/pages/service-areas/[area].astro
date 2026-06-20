@@ -22,7 +22,7 @@ const breadcrumb = {
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url + '/' },
-    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: SITE.url + '/service-areas/' },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: SITE.url + '/service-areas' },
     { '@type': 'ListItem', position: 3, name: area.title, item: pageUrl },
   ],
 };
@@ -44,7 +44,7 @@ const faqSchema = {
   ogImage="/images/roofing/lexington-roofing-service-area.webp"
 >
   <nav class="breadcrumb container" aria-label="Breadcrumb">
-    <a href="/">Home</a> <span aria-hidden="true">›</span> <a href="/service-areas/">Service Areas</a> <span aria-hidden="true">›</span> {area.title}
+    <a href="/">Home</a> <span aria-hidden="true">›</span> <a href="/service-areas">Service Areas</a> <span aria-hidden="true">›</span> {area.title}
   </nav>
   <section class="hero service-hero">
     <div class="container hero-grid">

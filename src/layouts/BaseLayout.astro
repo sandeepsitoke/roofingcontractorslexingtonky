@@ -24,7 +24,11 @@ const {
 } = Astro.props;
 
 const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
-const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.site ?? SITE.url).toString();
+const normalizePath = (pathname: string) => {
+  if (pathname === '/') return '/';
+  return pathname.replace(/\/+$/, '');
+};
+const canonicalUrl = canonical ?? new URL(normalizePath(Astro.url.pathname), Astro.site ?? SITE.url).toString();
 
 const baseSchema = {
   '@context': 'https://schema.org',

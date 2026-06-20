@@ -77,7 +77,7 @@ export const NAV = [
   { label: 'Roof Repair', href: '/roof-repair' },
   { label: 'Emergency Repair', href: '/emergency-roof-repair' },
   { label: 'Replacement', href: '/roof-replacement' },
-  { label: 'Service Areas', href: '/service-areas/' },
+  { label: 'Service Areas', href: '/service-areas' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];

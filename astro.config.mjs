@@ -5,6 +5,7 @@ import mdx from '@astrojs/mdx';
 
 export default defineConfig({
   site: 'https://roofingcontractorslexingtonky.com',
+  trailingSlash: 'never',
   integrations: [
     sitemap({
       changefreq: 'always',
